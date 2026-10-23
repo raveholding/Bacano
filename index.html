@@ -35,6 +35,7 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body)
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
 a{color:inherit}
+a.btn{text-decoration:none}
 :focus-visible{outline:2px solid var(--chrome);outline-offset:2px;border-radius:6px}
 ::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:10px;border:2px solid var(--bg)}
 
@@ -306,6 +307,153 @@ svg.chart .hv:hover .hl,svg.chart .hv:hover .hc{opacity:1}
 .receipt .rc-b{padding:14px 18px}
 .empty{padding:30px 10px;text-align:center;color:var(--ink-3);font-size:14px}
 
+/* ---------- Club, WhatsApp, avisos ---------- */
+.btn-wa{background:#1f8f55;color:#fff}
+.btn-wa:hover{background:#25a865}
+.banner{display:flex;gap:12px;align-items:center;background:var(--blue-soft);border:1px solid rgba(59,99,214,.35);color:var(--ink);border-radius:var(--r-md);padding:12px 14px;font-size:14px;margin-bottom:16px}
+.banner svg{flex:none;color:#8fa9f2}
+.warn{background:var(--red-soft);border:1px solid rgba(211,38,58,.4);border-radius:10px;padding:10px 12px;font-size:13.5px;margin:10px 0}
+label.check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-2);margin:0 0 12px;cursor:pointer}
+label.check input{margin-top:3px;accent-color:#f5f3ef;width:16px;height:16px;flex:none}
+.club-strip{display:flex;align-items:center;gap:14px;margin-top:10px;background:var(--panel-2);border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px}
+.club-strip.ready{border-color:var(--warn);background:var(--warn-soft)}
+.club-strip b{display:block;font-size:14px}
+.club-strip small{color:var(--ink-3);font-size:12.5px}
+.dots{display:grid;grid-template-columns:repeat(5,10px);gap:4px;flex:none}
+.dots i{width:10px;height:10px;border-radius:50%;background:var(--panel-3);border:1px solid var(--line-2)}
+.dots i.on{background:var(--ink);border-color:var(--ink)}
+.tk-d{color:#1f7a4d;font-size:13px}
+.tk-d span:last-child{font-weight:700}
+
+.stamp{max-width:420px;margin:0 auto;background:#f5f3ef;color:#1b1b1b;border-radius:18px;padding:16px;position:relative;overflow:hidden}
+.stamp::before{content:"";position:absolute;left:0;right:0;top:0;height:7px;background:var(--pole);background-size:57px 57px}
+.stamp-h{display:flex;align-items:center;gap:12px;margin:6px 0 14px}
+.stamp-h img{width:46px;height:46px;border-radius:10px;object-fit:cover;flex:none}
+.stamp-h b{font-family:var(--display);font-weight:400;font-size:26px;line-height:1;display:block}
+.stamp-h small{color:#6d675f;font-size:12.5px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stamp .cnt{font-family:var(--display);font-size:30px;line-height:1}
+.stamp-g{display:grid;grid-template-columns:repeat(var(--cols),1fr);gap:8px}
+.st{aspect-ratio:1;border-radius:50%;border:2px dashed #b9b2a7;display:grid;place-items:center;font-weight:800;font-size:13px;color:#9a938a}
+.st.on{border:2px solid #1b1b1b;background:#1b1b1b;color:#f5f3ef}
+.st.prize{border:2px solid var(--red);color:var(--red);background:rgba(211,38,58,.08)}
+.stamp-f{font-size:13px;color:#4a4640;margin-top:12px;font-weight:600}
+.coupon{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1.5px dashed var(--line-2);border-radius:12px;padding:10px 14px;margin-bottom:8px}
+.coupon b{font-family:var(--display);font-size:22px;font-weight:400;letter-spacing:.5px;display:block;line-height:1.1}
+.coupon small{color:var(--ink-3);font-size:12.5px}
+.coupon>span{font-family:var(--display);font-size:28px;color:#f08593}
+
+/* ---------- Agenda ---------- */
+.daystrip{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.dday{flex:none;min-width:84px;border:1.5px solid var(--line);background:var(--panel);border-radius:14px;padding:8px 10px;display:flex;flex-direction:column;align-items:center;line-height:1.2}
+.dday b{font-family:var(--display);font-size:28px;font-weight:400;line-height:1.1}
+.dday small{font-size:11.5px;color:var(--ink-3);text-transform:capitalize}
+.dday.on{background:var(--ink);border-color:var(--ink);color:#1b1b1b}
+.dday.on small{color:#4a4640}
+.dday[disabled]{opacity:.35;cursor:not-allowed}
+.daystrip.sm .dday{min-width:62px;padding:6px 8px}
+.daystrip.sm .dday b{font-size:22px}
+.agenda{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.ag-col{background:var(--panel-2);border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.ag-h{display:flex;gap:10px;align-items:center;padding:2px 2px 8px;border-bottom:1px solid var(--line)}
+.ag-h b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ag-h small{color:var(--ink-3);font-size:12px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.tu{text-align:left;border:1px solid var(--line);border-left:4px solid var(--ok);background:var(--panel);border-radius:10px;padding:9px 10px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.tu:hover{border-color:var(--line-2)}
+.tu b{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tu small{color:var(--ink-3);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tu-t{font-variant-numeric:tabular-nums;font-weight:800;font-size:12.5px;color:var(--ink-2)}
+.tu-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:4px}
+.tu-pendiente{border-left-color:var(--warn)}
+.tu-atendido{border-left-color:var(--line-2);opacity:.6}
+.tu-ausente,.tu-cancelado{border-left-color:var(--red);opacity:.5}
+.tu-ausente b,.tu-cancelado b{text-decoration:line-through}
+
+/* ---------- Reserva ---------- */
+.bk-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:18px}
+.bk-steps i{height:5px;border-radius:5px;background:var(--panel-3)}
+.bk-steps i.on{background:var(--pole);background-size:40px 40px}
+.bk-sum{background:var(--panel-2);border-radius:12px;padding:10px 14px}
+.bk-sum .tk-l{font-size:13.5px}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:8px}
+.slot{border:1.5px solid var(--line);background:var(--panel-2);border-radius:10px;padding:9px 0;font-weight:700;font-variant-numeric:tabular-nums}
+.slot:hover{border-color:var(--line-2)}
+.slot.on{background:var(--ink);color:#1b1b1b;border-color:var(--ink)}
+.bk-ok{text-align:center;padding:6px 0 14px}
+.bk-ok .tick{width:64px;height:64px;border-radius:50%;background:var(--ok);color:#fff;display:inline-grid;place-items:center;margin-bottom:10px}
+.bk-ok h2{font-family:var(--display);font-weight:400;font-size:38px;margin:0;line-height:1.05}
+.bk-ok p{color:var(--ink-2);margin:8px 0 0}
+.bk-actions{display:grid;gap:8px}
+
+/* ---------- Marketing ---------- */
+.camps{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px}
+.camp{display:flex;gap:12px;align-items:center;text-align:left;background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.camp:hover{border-color:var(--line-2)}
+.camp b{display:block;font-size:14px}
+.camp small{display:block;color:var(--ink-3);font-size:12px}
+.camp-i{width:40px;height:40px;border-radius:12px;background:var(--panel-3);display:grid;place-items:center;flex:none}
+.camp-n{font-family:var(--display);font-size:30px;line-height:1;min-width:34px;text-align:right}
+.preview{background:#0f2a1c;border:1px solid #1f5a3a;color:#e6f5ec;border-radius:12px 12px 12px 2px;padding:10px 12px;font-size:13.5px;margin-bottom:14px;white-space:pre-wrap}
+.preview:empty{display:none}
+.preview small{display:block;color:#8cc7a6;font-size:11.5px;margin-bottom:4px}
+.rcpt{max-height:340px;overflow:auto;border-top:1px solid var(--line)}
+
+/* ---------- Página pública ---------- */
+#pub{background:var(--bg);min-height:100vh;padding-bottom:90px}
+.pub-top{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:18px;padding:10px max(16px,calc((100% - 1080px)/2));background:rgba(27,27,27,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.pub-brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.pub-brand img{width:40px;height:40px;border-radius:9px;object-fit:cover}
+.pub-brand span{font-family:var(--display);font-size:28px;letter-spacing:1px}
+.pub-top nav{display:flex;gap:18px}
+.pub-top nav a{text-decoration:none;color:var(--ink-2);font-weight:600;font-size:14px}
+.pub-top nav a:hover{color:var(--ink)}
+.pub-hero{max-width:1080px;margin:0 auto;padding:48px 16px 40px;display:grid;grid-template-columns:minmax(220px,380px) 1fr;gap:44px;align-items:center}
+.pub-logo{width:100%;height:auto;border-radius:24px}
+.pub-hero h1{font-family:var(--display);font-weight:400;font-size:clamp(56px,8vw,104px);line-height:.92;margin:6px 0 14px;letter-spacing:.5px}
+.pub-hero p{color:var(--ink-2);font-size:17px;max-width:46ch;margin:0}
+.pub-open{display:flex;align-items:center;gap:8px;font-size:13.5px!important;font-weight:600}
+.pub-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.pub-cta .btn{padding:13px 20px}
+.pub-sec{max-width:1080px;margin:0 auto;padding:46px 16px 10px}
+.pub-sec h2{font-family:var(--display);font-weight:400;font-size:48px;margin:0;line-height:1}
+.pub-lead{color:var(--ink-2);margin:8px 0 22px;max-width:62ch}
+.pub-svc{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.svc-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.svc-row>div{flex:1}
+.svc-row b{display:block;font-size:16px}
+.svc-row small{color:var(--ink-3);font-size:13px}
+.svc-p{font-family:var(--display);font-size:26px;white-space:nowrap}
+.svc-row.on b{color:#fff}
+.pub-team{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.tm{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px}
+.tm>div{flex:1}
+.tm .btn{width:100%}
+.tm b{display:block}
+.tm small{display:flex;align-items:center;gap:6px;color:var(--ink-3);font-size:12.5px}
+.pub-club{display:grid;grid-template-columns:1fr 380px;gap:36px;align-items:start}
+.club-forms{display:grid;gap:22px}
+.club-forms form{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
+.club-card{position:sticky;top:90px}
+.pub-branch{display:flex;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px}
+.pub-branch h3{font-family:var(--display);font-weight:400;font-size:32px;margin:0;line-height:1}
+.pub-branch p{margin:4px 0 0;color:var(--ink-2);font-size:14px}
+.pub-foot{max-width:1080px;margin:50px auto 0;padding:26px 16px;border-top:1px solid var(--line);display:flex;gap:16px;align-items:center;flex-wrap:wrap;color:var(--ink-2);font-size:14px}
+.pub-foot img{width:54px;border-radius:10px}
+.pub-foot p{margin:0;flex:1;min-width:220px}
+.pub-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:40;display:flex;gap:16px;align-items:center;background:var(--ink);color:#1b1b1b;border-radius:999px;padding:8px 8px 8px 22px;box-shadow:0 18px 40px rgba(0,0,0,.5);width:min(520px,calc(100% - 24px));justify-content:space-between}
+.pub-wa{position:fixed;right:18px;bottom:18px;z-index:40;width:58px;height:58px;border-radius:50%;background:#1f8f55;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.sbtn{display:flex;align-items:center;gap:10px;margin:0 12px 10px;padding:11px 12px;border-radius:var(--r-md);border:1px solid var(--line-2);background:transparent;color:var(--ink);font-weight:700}
+.sbtn:hover{background:var(--panel-2)}
+
+@media (max-width:860px){
+  .pub-top nav{display:none}
+  .pub-hero{grid-template-columns:1fr;gap:18px;padding-top:24px;text-align:left}
+  .pub-logo{max-width:220px}
+  .pub-svc{grid-template-columns:1fr}
+  .pub-club{grid-template-columns:1fr}
+  .club-card{position:static;order:-1}
+  .agenda{grid-template-columns:1fr}
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width:1280px){.g-kpi{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:1100px){.pos{grid-template-columns:1fr}.ticket{position:static}.g-2-1,.g-3{grid-template-columns:1fr}}
@@ -351,6 +499,7 @@ svg.chart .hv:hover .hl,svg.chart .hv:hover .hc{opacity:1}
       <small>Salta Capital</small>
     </div>
     <nav class="nav" id="nav"></nav>
+    <button class="sbtn" onclick="location.hash='reservar'"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20"/></svg>Ver página pública</button>
     <div class="side-foot">
       <div class="clock"><span class="live"></span><span class="clk"></span></div>
       <button class="btn btn-line btn-sm" onclick="resetDemo()">Restablecer datos de demo</button>
@@ -370,6 +519,7 @@ svg.chart .hv:hover .hl,svg.chart .hv:hover .hc{opacity:1}
     <main class="content" id="view"></main>
   </div>
 </div>
+<div id="pub" style="display:none"></div>
 <div id="tip"></div>
 <div id="toasts"></div>
 <div id="modalRoot"></div>
@@ -411,7 +561,14 @@ const ICONS = {
   phone:'<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/>',
   chat:'<path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.5 8.5 0 1 1 21 11.5Z"/>',
   star:'<path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/>',
-  queue:'<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>'
+  queue:'<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>',
+  cal:'<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
+  gift:'<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9H5v-9M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/>',
+  tag:'<path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4Z"/><circle cx="7.5" cy="7.5" r="1.5"/>',
+  globe:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20"/>',
+  pin:'<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+  refresh:'<path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M8 16H3v5"/>',
+  mega:'<path d="m3 11 18-5v12L3 14v-3Z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>'
 };
 const ic = (n, s = 18) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n]}</svg>`;
 
@@ -448,12 +605,20 @@ function buildSeed() {
     {id:'s7', nombre:'Color / platinado',  precio:28000, duracion:90, pop:.6},
     {id:'s8', nombre:'Diseño freestyle',   precio:4500,  duracion:15, pop:1.2}
   ];
+  const cupones = [];  // se completan abajo (dependen de "today")
   const nombres = ['Matías','Agustín','Joaquín','Franco','Gonzalo','Ignacio','Lautaro','Ezequiel','Rodrigo','Sebastián','Mauricio','Emiliano','Federico','Gastón','Leandro','Maximiliano','Cristian','Diego','Ramiro','Alejo','Bautista','Thiago','Benjamín','Valentín','Marcos','Pablo','Hernán','Damián','Esteban','Nahuel','Walter','Germán','Iván','Juan Cruz','Santino','Mateo','Gabriel','Lisandro','Axel','Elías','Ricardo','Fabián','Martín','Tobías','Dylan','Oscar','Ulises','Ciro'];
   const apellidos = ['Tolaba','Vilte','Saravia','Figueroa','Aguirre','Flores','Cruz','Guaymás','Mamaní','Zerpa','Cardozo','Arias','López','Romero','Ovejero','Ibarra','Villagrán','Burgos','Lamas','Rivero','Toledo','Correa','Gómez','Pereyra','Chocobar','Sajama','Torino','Medina'];
   const notas = ['Prefiere degradé bajo, nunca rapado arriba','Viene con su hijo los sábados','Le gusta la barba bien marcada','Pide toalla caliente siempre','Avisarle promos por WhatsApp','Cliente desde la apertura','Paga siempre por transferencia','Llega justo a horario, no hacerlo esperar','','',''];
   const strip = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\s+/g, '');
 
   const now = Date.now(), today = sod(now);
+  cupones.push(
+    {code: 'BACANO10', pct: 10, desc: 'Bienvenida: 10% en la segunda visita', desde: today - 90 * DAY, hasta: today + 60 * DAY, activo: true},
+    {code: 'VUELVE15', pct: 15, desc: 'Recuperar clientes que no vienen hace un tiempo', desde: today - 45 * DAY, hasta: today + 30 * DAY, activo: true},
+    {code: 'CUMPLE20', pct: 20, desc: 'Regalo de cumpleaños, válido todo el mes', desde: today - 90 * DAY, hasta: today + 120 * DAY, activo: true},
+    {code: 'INVIERNO5', pct: 5, desc: 'Promo de invierno', desde: today - 90 * DAY, hasta: today - 30 * DAY, activo: false});
+  const origenes = [['Mostrador', 4], ['Instagram', 3], ['Recomendación', 2.5], ['Google', 1.5], ['Web', 1]];
+  const mesHoy = new Date(now).getMonth() + 1;
   const combos = [], used = new Set();
   while (combos.length < 150) { const n = pick(nombres), a = pick(apellidos); if (!used.has(n + a)) { used.add(n + a); combos.push([n, a]); } }
   const clientes = combos.map(([n, a], i) => {
@@ -466,6 +631,8 @@ function buildSeed() {
       email: strip(n) + '.' + strip(a) + (R() < .5 ? '' : Math.floor(R() * 90 + 10)) + '@gmail.com',
       sucursalId: suc, barberoPref: pick(bs).id, servicioPref: wpick(servicios, s => s.pop).id,
       notas: pick(notas), frecuencia: .35 + R() * 1.4,
+      cumple: String(R() < .09 ? mesHoy : 1 + Math.floor(R() * 12)).padStart(2, '0') + '-' + String(1 + Math.floor(R() * 28)).padStart(2, '0'),
+      consent: R() < .86, origen: wpick(origenes, o => o[1])[0], sellos: 0, canjes: 0,
       desde: r < .12 ? today - Math.floor(R() * 14) * DAY : today - 90 * DAY,         // clientes nuevos
       hasta: r > .86 ? today - (46 + Math.floor(R() * 10)) * DAY : Infinity,          // clientes que dejaron de venir
       alta: 0
@@ -494,7 +661,9 @@ function buildSeed() {
         const svc = R() < .58 ? servicios.find(x => x.id === cli.servicioPref) : wpick(servicios, x => x.pop);
         const pago = wpick(pagos, p => p[1])[0];
         const propina = R() < .22 ? Math.round(svc.precio * (.08 + R() * .08) / 500) * 500 : 0;
-        tx.push(makeTx({ticket: ++ticket, ts, sucursalId: s.id, clienteId: cli.id, barbero: bar, servicio: svc, pago, propina}));
+        let cup = null;
+        if (R() < .04) { const act = cupones.filter(c => c.desde <= ts && c.hasta >= ts); if (act.length) cup = pick(act); }
+        tx.push(makeTx({ticket: ++ticket, ts, sucursalId: s.id, clienteId: cli.id, barbero: bar, servicio: svc, pago, propina, cupon: cup}));
       }
     }
   }
@@ -503,7 +672,11 @@ function buildSeed() {
     const f = tx.find(x => x.clienteId === c.id);
     c.alta = f ? f.ts - Math.floor(R() * 25) * DAY : now - Math.floor(R() * 10) * DAY;
     delete c.frecuencia; delete c.desde; delete c.hasta;
+    const tk = new Set(tx.filter(x => x.clienteId === c.id).map(x => x.ticket)).size;
+    c.canjes = Math.floor(tk / 10); c.sellos = tk % 10;
   }
+  // un par de socios con el premio listo para mostrar el canje
+  clientes.filter(c => c.sellos >= 7).slice(0, 3).forEach(c => c.sellos = 10);
 
   // Cola de espera de hoy (turnos tomados en mostrador, aún sin cobrar)
   const cola = [];
@@ -513,7 +686,17 @@ function buildSeed() {
     if (cl) cola.push({id: 'q' + i, sucursalId: s, clienteId: c, servicios: sv, barberoId: b, ts: now - (i + 1) * 7 * 6e4});
   });
 
-  return {version: 1, seedDay: today, dirty: false, nextTicket: ticket + 1, sucursales, barberos, servicios, clientes, tx, cola};
+  // historial de campañas enviadas
+  const envios = [];
+  const sendHist = (camp, n, daysAgo) => { for (let i = 0; i < n; i++) envios.push({camp, clienteId: pick(clientes).id, ts: today - daysAgo * DAY + (10 + R() * 8) * 36e5}); };
+  sendHist('recuperar', 16, 21); sendHist('cumple', 7, 18); sendHist('nuevos', 11, 9); sendHist('resena', 24, 3); sendHist('manana', 18, 1);
+
+  const db = {version: 2, seedDay: today, dirty: false, nextTicket: ticket + 1, sucursales, barberos, servicios, clientes, tx, cola,
+    turnos: [], cupones, envios, campTpl: {},
+    club: {nombre: 'Club Bacano', meta: 10, premio: 'Corte clásico gratis', premioSvc: 's1'},
+    negocio: {instagram: '@bacano.barbershop', resena: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Bacano Barber Shop Salta')}};
+  DB = db; seedTurnos(R);
+  return db;
 }
 
 /* Liquidación según modelo de trabajo del barbero (queda congelada en cada movimiento) */
@@ -522,9 +705,12 @@ function splitFor(b, precio) {
   const mb = Math.round(precio * b.comision / 100);
   return {modelo: 'comision', pct: b.comision, montoBarbero: mb, montoLocal: precio - mb};
 }
-function makeTx({ticket, ts, sucursalId, clienteId, barbero, servicio, pago, propina}) {
+const descFor = (lista, cupon, canje) => canje ? lista : cupon ? Math.round(lista * cupon.pct / 100 / 100) * 100 : 0;
+function makeTx({ticket, ts, sucursalId, clienteId, barbero, servicio, pago, propina, cupon, canje}) {
+  const lista = servicio.precio, descuento = descFor(lista, cupon, canje), precio = lista - descuento;
   return {id: 't' + ticket + '-' + servicio.id, ticket, ts, sucursalId, clienteId, barberoId: barbero.id,
-    servicioId: servicio.id, precio: servicio.precio, propina: propina || 0, pago, ...splitFor(barbero, servicio.precio)};
+    servicioId: servicio.id, lista, descuento, precio, cupon: cupon ? cupon.code : null, canje: !!canje,
+    propina: propina || 0, pago, ...splitFor(barbero, precio)};
 }
 
 /* =====================================================================
@@ -534,7 +720,7 @@ const KEY = 'bacano_demo_v1';
 let DB;
 function load() {
   try { const raw = localStorage.getItem(KEY); if (raw) { const d = JSON.parse(raw);
-    if (d && d.version === 1 && (d.dirty || d.seedDay === sod(Date.now()))) { DB = d; return; } } } catch (e) {}
+    if (d && d.version === 2 && (d.dirty || d.seedDay === sod(Date.now()))) { DB = d; return; } } } catch (e) {}
   DB = buildSeed(); save();
 }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(DB)); } catch (e) {} }
@@ -554,12 +740,14 @@ const V = id => DB.servicios.find(x => x.id === id);
 /* =====================================================================
    4. Estado de la interfaz y filtros
    ===================================================================== */
-const UI = {view: 'dashboard', branch: 'all', period: '30', rank: 'cortes', trace: 'all', crmQ: '', crmSeg: 'all'};
+const UI = {agDay: null, view: 'dashboard', branch: 'all', period: '30', rank: 'cortes', trace: 'all', crmQ: '', crmSeg: 'all'};
 const VIEWS = [
   {id: 'dashboard', label: 'Dashboard', icon: 'dash', title: 'Dashboard general'},
+  {id: 'agenda', label: 'Agenda', icon: 'cal', title: 'Agenda de turnos'},
   {id: 'pos', label: 'Mostrador', icon: 'pos', title: 'Mostrador y cobro'},
   {id: 'ranking', label: 'Ranking', icon: 'rank', title: 'Ranking de barberos'},
   {id: 'crm', label: 'Clientes', icon: 'crm', title: 'Clientes'},
+  {id: 'marketing', label: 'Club y marketing', icon: 'mega', title: 'Club y marketing'},
   {id: 'sucursales', label: 'Sucursales', icon: 'store', title: 'Sucursales y barberos'}
 ];
 const PERIODS = [['hoy', 'Hoy'], ['7', '7 días'], ['30', '30 días'], ['all', 'Todo']];
@@ -730,7 +918,9 @@ function vDashboard() {
   <div class="grid g-2-1 mt">
     <div class="card"><div class="card-h"><div><h3>Últimos movimientos</h3><p class="sub">Cada cobro queda registrado con barbero, cliente y liquidación</p></div><button class="btn btn-main btn-sm" onclick="go('pos')">${ic('plus', 16)} Nuevo cobro</button></div>
       ${txTable(recent)}</div>
-    <div class="card"><h3>Medios de pago</h3><p class="sub">Facturación por medio, ${periodLabel()}</p>${hbars(pays, kmoney)}</div>
+    <div class="card"><h3>Medios de pago</h3><p class="sub">Facturación por medio, ${periodLabel()}</p>${hbars(pays, kmoney)}
+      <div style="border-top:1px solid var(--line);margin-top:14px;padding-top:14px"><div class="card-h" style="margin-bottom:8px"><div><h3>Turnos de hoy</h3><p class="sub">${DB.turnos.filter(t => sod(t.ts) === sod(Date.now()) && inBranch(t) && isBusy(t)).length} reservados · ${DB.turnos.filter(t => sod(t.ts) === sod(Date.now()) && inBranch(t) && t.origen === 'Web').length} desde la web</p></div><button class="btn btn-ghost btn-sm" onclick="go('agenda')">Ver agenda</button></div>
+      ${DB.turnos.filter(t => t.ts >= Date.now() && inBranch(t) && ['pendiente', 'confirmado'].includes(t.estado)).sort((a, b) => a.ts - b.ts).slice(0, 4).map(t => `<div class="q-item" style="cursor:pointer" onclick="turnoModal('${t.id}')"><div class="who">${av(B(t.barberoId))}<div><b>${esc(C(t.clienteId)?.nombre)}</b><small style="text-transform:capitalize">${sod(t.ts) === sod(Date.now()) ? 'hoy' : DIAS[new Date(t.ts).getDay()]} ${hm(minOf(t.ts))} · ${esc(S(t.sucursalId).nombre.replace('Bacano ', ''))}</small></div></div>${estTag(t.estado)}</div>`).join('') || '<div class="empty" style="padding:10px">No hay próximos turnos.</div>'}</div></div>
   </div>`;
 }
 
@@ -748,25 +938,41 @@ function txTable(list, withBarber = true) {
 /* ---------- Mostrador / POS ---------- */
 let POS;
 function resetPos(keepBranch) {
-  POS = {sucursalId: keepBranch || (UI.branch !== 'all' ? UI.branch : 'centro'), clienteId: null, servicios: [], barberoId: null, pago: 'Efectivo', tipMode: 0, tipCustom: 0, colaId: null};
+  POS = {sucursalId: keepBranch || (UI.branch !== 'all' ? UI.branch : 'centro'), clienteId: null, servicios: [], barberoId: null, pago: 'Efectivo', tipMode: 0, tipCustom: 0, colaId: null, turnoId: null, cupon: null, canje: false};
+}
+function cuponValido(code) {
+  const c = DB.cupones.find(x => x.code === String(code || '').trim().toUpperCase()), t = Date.now();
+  return c && c.activo && c.desde <= t && c.hasta >= t ? c : null;
+}
+function posLines() {
+  const cup = POS.cupon ? cuponValido(POS.cupon) : null; let usado = false;
+  return POS.servicios.map(id => {
+    const v = V(id), canje = POS.canje && !usado && id === DB.club.premioSvc;
+    if (canje) usado = true;
+    const cupon = !canje && cup ? cup : null, desc = descFor(v.precio, cupon, canje);
+    return {v, lista: v.precio, desc, precio: v.precio - desc, canje, cupon, tag: canje ? 'Premio del club' : cupon ? `Cupón ${cupon.code} −${cupon.pct}%` : ''};
+  });
 }
 function posTotals() {
-  const sub = sum(POS.servicios, id => V(id).precio);
+  const lines = posLines(), lista = sum(lines, l => l.lista), desc = sum(lines, l => l.desc), sub = lista - desc;
   const tip = POS.tipMode === 'c' ? (+POS.tipCustom || 0) : Math.round(sub * POS.tipMode / 100 / 100) * 100;
   const b = POS.barberoId ? B(POS.barberoId) : null;
-  const sp = b ? POS.servicios.map(id => splitFor(b, V(id).precio)) : [];
-  return {sub, tip, total: sub + tip, b, barb: sum(sp, x => x.montoBarbero) + tip, local: sum(sp, x => x.montoLocal)};
+  const sp = b ? lines.map(l => splitFor(b, l.precio)) : [];
+  return {lines, lista, desc, sub, tip, total: sub + tip, b, barb: sum(sp, x => x.montoBarbero) + tip, local: sum(sp, x => x.montoLocal)};
 }
 function vPos() {
   const s = S(POS.sucursalId), c = POS.clienteId ? C(POS.clienteId) : null;
   const bs = barbF(POS.sucursalId), today = sod(Date.now());
   const todayTx = DB.tx.filter(x => x.ts >= today && x.sucursalId === POS.sucursalId);
   const cola = DB.cola.filter(q => q.sucursalId === POS.sucursalId);
-  const tt = posTotals();
-  const cst = c ? clientStats(c.id) : null;
+  const proximos = DB.turnos.filter(t => t.sucursalId === POS.sucursalId && sod(t.ts) === today && ['pendiente', 'confirmado'].includes(t.estado)).sort((a, b) => a.ts - b.ts);
+  const tt = posTotals(), cst = c ? clientStats(c.id) : null;
   const ready = c && POS.servicios.length && POS.barberoId;
+  const meta = DB.club.meta, premio = c && (c.sellos || 0) >= meta;
+  const cupOk = POS.cupon ? cuponValido(POS.cupon) : null;
 
   return `<div class="pos"><div>
+    ${POS.turnoId ? `<div class="banner">${ic('cal', 18)}<span>Cobrando el turno de <b>${esc(c?.nombre)}</b>. Al cobrar queda marcado como atendido en la agenda.</span></div>` : ''}
     <div class="card">
       <div class="step"><div class="step-h"><span class="step-n done">1</span><h4>Sucursal</h4></div>
         <div class="seg">${DB.sucursales.map(x => `<button class="${x.id === POS.sucursalId ? 'on' : ''}" onclick="posBranch('${x.id}')"><i class="dot" style="background:${x.color}"></i>${esc(x.nombre)}</button>`).join('')}</div></div>
@@ -774,7 +980,9 @@ function vPos() {
       <div class="step"><div class="step-h"><span class="step-n ${c ? 'done' : ''}">2</span><h4>Cliente</h4><span class="muted">Buscá por nombre o teléfono</span></div>
         ${c ? `<div class="chosen">${cav(c)}<div style="flex:1;min-width:0"><b>${esc(c.nombre)}</b><div class="meta">${esc(c.telefono)} · ${cst.visitas} visitas${cst.ultima ? ' · última ' + ago(cst.ultima) : ''}</div>
               ${cst.favSvc ? `<div class="meta">Suele pedir <b style="color:var(--ink)">${esc(V(cst.favSvc).nombre)}</b>${cst.favBar ? ` con <b style="color:var(--ink)">${esc(B(cst.favBar)?.nombre || '')}</b>` : ''}</div>` : ''}</div>
-              <button class="btn btn-ghost btn-sm" onclick="posClient(null)">Cambiar</button></div>`
+              <button class="btn btn-ghost btn-sm" onclick="posClient(null)">Cambiar</button></div>
+            <div class="club-strip ${premio ? 'ready' : ''}">${stampDots(c)}<div style="flex:1;min-width:0"><b>${premio ? 'Premio listo: ' + esc(DB.club.premio) : `${c.sellos || 0} de ${meta} sellos`}</b><small>${premio ? 'Se puede canjear en este cobro' : `Con este cobro suma 1 sello. Le faltan ${Math.max(0, meta - (c.sellos || 0))} para el premio.`}</small></div>
+              ${premio ? `<button class="btn btn-sm ${POS.canje ? 'btn-main' : 'btn-line'}" onclick="posCanje()">${POS.canje ? ic('check', 15) + ' Canjeando' : 'Canjear premio'}</button>` : ''}</div>`
           : `<div style="display:flex;gap:10px"><div class="cli-box" style="flex:1"><input class="input" id="cliQ" placeholder="Ej: Matías o 387…" autocomplete="off" oninput="posSearch(this.value)" onfocus="posSearch(this.value)"><div id="cliSug"></div></div>
               <button class="btn btn-line" onclick="clientForm(null,true)">${ic('plus', 16)} Nuevo</button></div>`}</div>
 
@@ -787,9 +995,12 @@ function vPos() {
 
       <div class="step" style="margin-bottom:0"><div class="step-h"><span class="step-n done">5</span><h4>Pago</h4></div>
         <div class="chips" style="margin-bottom:12px">${['Efectivo', 'Transferencia', 'Mercado Pago', 'Débito'].map(m => `<button class="chip ${POS.pago === m ? 'on' : ''}" onclick="posPay('${m}')">${m}</button>`).join('')}</div>
-        <div class="chips" style="align-items:center"><span class="muted" style="font-size:13px;margin-right:4px">Propina</span>${[0, 10, 15].map(p => `<button class="chip ${POS.tipMode === p ? 'on' : ''}" onclick="posTip(${p})">${p ? p + '%' : 'Sin propina'}</button>`).join('')}
+        <div class="chips" style="align-items:center;margin-bottom:12px"><span class="muted" style="font-size:13px;margin-right:4px">Propina</span>${[0, 10, 15].map(p => `<button class="chip ${POS.tipMode === p ? 'on' : ''}" onclick="posTip(${p})">${p ? p + '%' : 'Sin propina'}</button>`).join('')}
           <button class="chip ${POS.tipMode === 'c' ? 'on' : ''}" onclick="posTip('c')">Otro monto</button>
-          ${POS.tipMode === 'c' ? `<input class="input" style="width:130px;padding:7px 10px" type="number" min="0" step="100" value="${POS.tipCustom || ''}" placeholder="$" onchange="POS.tipCustom=+this.value;render()">` : ''}</div></div>
+          ${POS.tipMode === 'c' ? `<input class="input" style="width:130px;padding:7px 10px" type="number" min="0" step="100" value="${POS.tipCustom || ''}" placeholder="$" onchange="POS.tipCustom=+this.value;render()">` : ''}</div>
+        <div class="chips" style="align-items:center"><span class="muted" style="font-size:13px;margin-right:4px">Cupón</span>
+          ${cupOk ? `<span class="chip on">${ic('tag', 14)} ${esc(cupOk.code)} −${cupOk.pct}%</span><button class="btn btn-ghost btn-sm" onclick="POS.cupon=null;render()">Quitar</button>`
+            : `<input class="input" id="cupIn" style="width:150px;padding:7px 10px;text-transform:uppercase" placeholder="Ej: VUELVE15" onkeydown="if(event.key==='Enter')posCupon(this.value)"><button class="btn btn-line btn-sm" onclick="posCupon($('#cupIn').value)">Aplicar</button>`}</div></div>
     </div>
   </div>
 
@@ -801,7 +1012,7 @@ function vPos() {
         <div class="tk-l"><span style="color:#6d675f">Cliente</span><span>${c ? esc(c.nombre) : '—'}</span></div>
         <div class="tk-l"><span style="color:#6d675f">Barbero</span><span>${tt.b ? esc(tt.b.nombre) : '—'}</span></div>
         <div style="border-top:1px solid #d8d3ca;margin:8px 0"></div>
-        ${POS.servicios.length ? POS.servicios.map(id => `<div class="tk-l"><span>${esc(V(id).nombre)}<button class="tk-x" aria-label="Quitar" onclick="posSvc('${id}')">×</button></span><span>${money(V(id).precio)}</span></div>`).join('') : '<div class="tk-empty">Elegí uno o más servicios.</div>'}
+        ${tt.lines.length ? tt.lines.map(l => `<div class="tk-l"><span>${esc(l.v.nombre)}<button class="tk-x" aria-label="Quitar" onclick="posSvc('${l.v.id}')">×</button></span><span>${money(l.lista)}</span></div>${l.desc ? `<div class="tk-l tk-d"><span>${esc(l.tag)}</span><span>−${money(l.desc)}</span></div>` : ''}`).join('') : '<div class="tk-empty">Elegí uno o más servicios.</div>'}
         ${tt.tip ? `<div class="tk-l"><span>Propina</span><span>${money(tt.tip)}</span></div>` : ''}
       </div>
       <div class="tk-tot"><span style="font-weight:700">Total · ${POS.pago}</span><b>${money(tt.total)}</b></div>
@@ -812,22 +1023,27 @@ function vPos() {
     </div>
     <div class="tk-act">
       <button class="btn btn-red btn-block" style="padding:14px;font-size:15px" ${ready ? '' : 'disabled'} onclick="posCharge()">${ic('check', 18)} Cobrar ${money(tt.total)}</button>
-      <button class="btn btn-line btn-block" ${ready ? '' : 'disabled'} onclick="posQueue()">${ic('queue', 16)} Tomar turno y cobrar después</button>
+      ${POS.turnoId ? '' : `<button class="btn btn-line btn-block" ${ready ? '' : 'disabled'} onclick="posQueue()">${ic('queue', 16)} Tomar turno y cobrar después</button>`}
       ${(c || POS.servicios.length || POS.barberoId) ? `<button class="btn btn-ghost btn-block" onclick="resetPos(POS.sucursalId);render()">Limpiar</button>` : ''}
     </div>
 
-    <div class="card mt"><div class="card-h"><div><h3>En espera</h3><p class="sub">Turnos tomados en ${esc(s.nombre)}</p></div><span class="tag t-mute">${cola.length}</span></div>
+    <div class="card mt"><div class="card-h"><div><h3>Turnos que faltan hoy</h3><p class="sub">Reservados en la agenda de ${esc(s.nombre)}</p></div><span class="tag t-mute">${proximos.length}</span></div>
+      ${proximos.length ? proximos.slice(0, 5).map(t => { const tc = C(t.clienteId), tb = B(t.barberoId);
+        return `<div class="q-item"><div class="who">${cav(tc)}<div style="min-width:0"><b>${hm(minOf(t.ts))} · ${esc(tc?.nombre)}</b><small>${t.servicios.map(id => V(id).nombre).join(' + ')} · ${esc(tb?.nombre.split(' ')[0])}</small></div></div>
+        <button class="btn btn-main btn-sm" onclick="turnoLoad('${t.id}')">Cobrar</button></div>`; }).join('') : '<div class="empty" style="padding:14px">No quedan turnos para hoy.</div>'}</div>
+
+    <div class="card mt"><div class="card-h"><div><h3>En espera</h3><p class="sub">Clientes sin turno, tomados en mostrador</p></div><span class="tag t-mute">${cola.length}</span></div>
       ${cola.length ? cola.map(q => { const qc = C(q.clienteId), qb = B(q.barberoId);
         return `<div class="q-item"><div class="who">${cav(qc)}<div style="min-width:0"><b>${esc(qc?.nombre)}</b><small>${q.servicios.map(id => V(id).nombre).join(' + ')} · ${esc(qb?.nombre.split(' ')[0])} · ${fTime(q.ts)}</small></div></div>
         <button class="btn btn-main btn-sm" onclick="queueLoad('${q.id}')">Cobrar</button><button class="btn btn-ghost btn-sm" aria-label="Quitar de la cola" onclick="queueDel('${q.id}')">${ic('x', 16)}</button></div>`; }).join('') : '<div class="empty" style="padding:14px">No hay clientes esperando.</div>'}</div>
 
     <div class="card mt"><div class="card-h"><div><h3>Cobros de hoy</h3><p class="sub">${todayTx.length} servicios · ${money(sum(todayTx, x => x.precio))}</p></div></div>
-      ${todayTx.slice(-6).reverse().map(x => `<div class="q-item"><div class="who">${av(B(x.barberoId))}<div style="min-width:0"><b>${esc(C(x.clienteId)?.nombre)}</b><small>${esc(V(x.servicioId).nombre)} · ${fTime(x.ts)}</small></div></div><b style="font-variant-numeric:tabular-nums">${money(x.precio)}</b></div>`).join('') || '<div class="empty" style="padding:14px">Todavía no hubo cobros hoy.</div>'}</div>
+      ${todayTx.slice(-6).reverse().map(x => `<div class="q-item"><div class="who">${av(B(x.barberoId))}<div style="min-width:0"><b>${esc(C(x.clienteId)?.nombre)}</b><small>${esc(V(x.servicioId).nombre)} · ${fTime(x.ts)}${x.cupon ? ' · ' + x.cupon : x.canje ? ' · premio' : ''}</small></div></div><b style="font-variant-numeric:tabular-nums">${money(x.precio)}</b></div>`).join('') || '<div class="empty" style="padding:14px">Todavía no hubo cobros hoy.</div>'}</div>
   </div></div>`;
 }
 function posBranch(id) { POS.sucursalId = id; if (POS.barberoId && B(POS.barberoId).sucursalId !== id) POS.barberoId = null; render(); }
 function posClient(id) {
-  POS.clienteId = id;
+  POS.clienteId = id; POS.canje = false;
   if (id) { const st = clientStats(id); const fb = st.favBar && B(st.favBar);
     if (!POS.barberoId && fb && fb.sucursalId === POS.sucursalId) POS.barberoId = fb.id; }
   render(); if (!id) setTimeout(() => $('#cliQ')?.focus(), 0);
@@ -839,20 +1055,36 @@ function posSearch(q) {
   const digits = q.replace(/\D/g, '');
   const list = DB.clientes.filter(c => c.nombre.toLowerCase().includes(q) || (digits.length > 2 && c.telefono.replace(/\D/g, '').includes(digits))).slice(0, 7);
   box.innerHTML = `<div class="sugg">${list.map(c => { const st = clientStats(c.id);
-    return `<button onclick="posClient('${c.id}')">${cav(c)}<div class="who" style="flex:1"><div><b>${esc(c.nombre)}</b><small>${esc(c.telefono)} · ${st.visitas} visitas</small></div></div>${segTag(st.seg)}</button>`; }).join('')}
+    return `<button onclick="posClient('${c.id}')">${cav(c)}<div class="who" style="flex:1"><div><b>${esc(c.nombre)}</b><small>${esc(c.telefono)} · ${st.visitas} visitas · ${c.sellos || 0}/${DB.club.meta} sellos</small></div></div>${segTag(st.seg)}</button>`; }).join('')}
     <button onclick="clientForm(null,true,'${esc(q.replace(/'/g, ''))}')" style="color:var(--ink-2)">${ic('plus', 16)} Crear cliente nuevo${list.length ? '' : ` “${esc(q)}”`}</button></div>`;
 }
-function posSvc(id) { const i = POS.servicios.indexOf(id); i >= 0 ? POS.servicios.splice(i, 1) : POS.servicios.push(id); render(); }
+function posSvc(id) { const i = POS.servicios.indexOf(id); i >= 0 ? POS.servicios.splice(i, 1) : POS.servicios.push(id); if (id === DB.club.premioSvc && i >= 0) POS.canje = false; render(); }
 function posBarber(id) { POS.barberoId = POS.barberoId === id ? null : id; render(); }
 function posPay(m) { POS.pago = m; render(); }
 function posTip(m) { POS.tipMode = m; render(); }
+function posCanje() {
+  POS.canje = !POS.canje;
+  if (POS.canje && !POS.servicios.includes(DB.club.premioSvc)) POS.servicios.unshift(DB.club.premioSvc);
+  render();
+}
+function posCupon(code) {
+  code = String(code || '').trim().toUpperCase(); if (!code) return;
+  const c = DB.cupones.find(x => x.code === code);
+  if (!c) { toast(`No existe el cupón ${code}`); return; }
+  if (!cuponValido(code)) { toast(`El cupón ${code} está vencido o pausado`); return; }
+  POS.cupon = code; render(); toast(`Cupón ${code} aplicado: −${c.pct}%`);
+}
 function posCharge() {
   const tt = posTotals(); if (!(POS.clienteId && POS.servicios.length && tt.b)) return;
   const ticket = DB.nextTicket++, ts = Date.now(), items = [];
-  POS.servicios.forEach((id, i) => { const t = makeTx({ticket, ts, sucursalId: POS.sucursalId, clienteId: POS.clienteId, barbero: tt.b, servicio: V(id), pago: POS.pago, propina: i === 0 ? tt.tip : 0}); DB.tx.push(t); items.push(t); });
+  tt.lines.forEach((l, i) => { const t = makeTx({ticket, ts, sucursalId: POS.sucursalId, clienteId: POS.clienteId, barbero: tt.b, servicio: l.v, pago: POS.pago, propina: i === 0 ? tt.tip : 0, cupon: l.cupon, canje: l.canje}); DB.tx.push(t); items.push(t); });
+  const c = C(POS.clienteId), canjeo = tt.lines.some(l => l.canje);
+  if (canjeo) { c.sellos = Math.max(0, (c.sellos || 0) - DB.club.meta); c.canjes = (c.canjes || 0) + 1; }
+  else c.sellos = (c.sellos || 0) + 1;
   if (POS.colaId) DB.cola = DB.cola.filter(q => q.id !== POS.colaId);
-  touch();
-  const snap = {ticket, ts, s: S(POS.sucursalId), c: C(POS.clienteId), b: tt.b, items, tt, pago: POS.pago};
+  if (POS.turnoId) { const tu = DB.turnos.find(x => x.id === POS.turnoId); if (tu) { tu.estado = 'atendido'; tu.ticket = ticket; } }
+  _cs = null; touch();
+  const snap = {ticket, ts, s: S(POS.sucursalId), c, b: tt.b, items, tt, pago: POS.pago, canjeo};
   resetPos(POS.sucursalId); render();
   toast(`Cobro registrado · Ticket #${ticket}`);
   receiptModal(snap);
@@ -866,18 +1098,27 @@ function queueLoad(id) { const q = DB.cola.find(x => x.id === id); if (!q) retur
   resetPos(q.sucursalId); Object.assign(POS, {clienteId: q.clienteId, servicios: [...q.servicios], barberoId: q.barberoId, colaId: q.id});
   render(); window.scrollTo({top: 0, behavior: 'smooth'}); }
 function queueDel(id) { DB.cola = DB.cola.filter(x => x.id !== id); if (POS.colaId === id) POS.colaId = null; touch(); render(); }
+function turnoLoad(id) {
+  const t = DB.turnos.find(x => x.id === id); if (!t) return;
+  closeModal(); resetPos(t.sucursalId);
+  Object.assign(POS, {clienteId: t.clienteId, servicios: [...t.servicios], barberoId: t.barberoId, turnoId: t.id});
+  UI.view = 'pos'; render(); window.scrollTo({top: 0, behavior: 'smooth'});
+}
 function receiptModal(r) {
+  const c = C(r.c.id), wa = waLink(c.telefono, `Hola ${first(c.nombre)}! Gracias por venir a Bacano. Tu ticket #${r.ticket}: ${r.items.map(x => V(x.servicioId).nombre).join(' + ')}, total ${money(r.tt.total)}. Ya llevás ${c.sellos || 0} de ${DB.club.meta} sellos en el ${DB.club.nombre}. ¡Te esperamos!`);
   openModal(`<div class="m-b"><div class="receipt"><div class="rc-h"><img src="${LOGO}" alt="Bacano"></div><div class="pole-strip"></div>
     <div class="rc-b"><div style="display:flex;justify-content:space-between;font-size:13px;color:#6d675f"><span>Ticket #${r.ticket}</span><span>${fDT(r.ts)}</span></div>
     <div style="font-size:13px;color:#6d675f;margin-bottom:10px">${esc(r.s.nombre)} · ${esc(r.s.direccion)}</div>
-    <div class="tk-l"><span>Cliente</span><span>${esc(r.c.nombre)}</span></div><div class="tk-l"><span>Atendió</span><span>${esc(r.b.nombre)}</span></div>
+    <div class="tk-l"><span>Cliente</span><span>${esc(c.nombre)}</span></div><div class="tk-l"><span>Atendió</span><span>${esc(r.b.nombre)}</span></div>
     <div style="border-top:1.5px dashed #c9c4bb;margin:8px 0"></div>
-    ${r.items.map(x => `<div class="tk-l"><span>${esc(V(x.servicioId).nombre)}</span><span>${money(x.precio)}</span></div>`).join('')}
+    ${r.items.map(x => `<div class="tk-l"><span>${esc(V(x.servicioId).nombre)}</span><span>${money(x.lista)}</span></div>${x.descuento ? `<div class="tk-l tk-d"><span>${x.canje ? 'Premio del club' : 'Cupón ' + x.cupon}</span><span>−${money(x.descuento)}</span></div>` : ''}`).join('')}
     ${r.tt.tip ? `<div class="tk-l"><span>Propina</span><span>${money(r.tt.tip)}</span></div>` : ''}
     <div class="tk-l" style="border-top:1.5px dashed #c9c4bb;margin-top:8px;padding-top:10px;align-items:baseline"><span style="font-weight:700">Total · ${r.pago}</span><span style="font-family:var(--display);font-size:36px;font-weight:400">${money(r.tt.total)}</span></div>
-    <div style="text-align:center;color:#6d675f;font-size:12.5px;margin-top:6px">¡Gracias por elegir Bacano!</div></div></div>
+    <div style="text-align:center;color:#6d675f;font-size:12.5px;margin-top:6px">${r.canjeo ? '¡Premio canjeado! La tarjeta vuelve a empezar.' : `Sumaste un sello: ${c.sellos || 0} de ${DB.club.meta} en el ${esc(DB.club.nombre)}.`}</div></div></div>
     <div class="deal-box" style="margin:14px 0 0"><div style="font-size:13px;flex:1"><b>Liquidación interna</b><br><span class="muted">${esc(r.b.nombre)}: ${money(r.tt.barb)} · Bacano: ${money(r.tt.local)}${r.b.modelo === 'alquiler' ? ' (alquiler de silla)' : ''}</span></div></div></div>
-    <div class="m-f"><button class="btn btn-line" onclick="closeModal();clientModal('${r.c.id}')">Ver ficha del cliente</button><button class="btn btn-main" onclick="closeModal()">Nuevo cobro</button></div>`);
+    <div class="m-f"><a class="btn btn-wa" href="${wa}" target="_blank" rel="noopener">${ic('chat', 16)} Enviar ticket por WhatsApp</a>
+      ${c.consent ? `<a class="btn btn-line" href="${waLink(c.telefono, campText('resena', c))}" target="_blank" rel="noopener" onclick="logEnvio('resena','${c.id}')">${ic('star', 15)} Pedir reseña</a>` : ''}
+      <button class="btn btn-main" onclick="closeModal()">Nuevo cobro</button></div>`);
 }
 
 /* ---------- Ranking y trazabilidad ---------- */
@@ -983,7 +1224,7 @@ function crmCards(list) {
   return `<div class="cgrid">${list.map(c => { const s = st[c.id], fb = s.favBar && B(s.favBar);
     return `<button class="ccard" onclick="clientModal('${c.id}')"><div class="who">${cav(c)}<div style="flex:1;min-width:0"><b>${esc(c.nombre)}</b><small>${esc(c.telefono)}</small></div>${segTag(s.seg)}</div>
     <div class="stats"><div>Visitas<b>${s.visitas}</b></div><div>Gastó<b>${kmoney(s.total)}</b></div><div>Última<b>${s.ultima ? ago(s.ultima) : '—'}</b></div></div>
-    <div style="font-size:12.5px;color:var(--ink-2)">${s.favSvc ? `${esc(V(s.favSvc).nombre)}${fb ? ' con ' + esc(fb.nombre.split(' ')[0]) : ''}` : 'Todavía sin visitas'}</div></button>`; }).join('')}</div>`;
+    <div style="display:flex;gap:10px;align-items:center;justify-content:space-between"><span style="font-size:12.5px;color:var(--ink-2);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.favSvc ? `${esc(V(s.favSvc).nombre)}${fb ? ' con ' + esc(fb.nombre.split(' ')[0]) : ''}` : 'Todavía sin visitas'}</span>${stampDots(c)}</div></button>`; }).join('')}</div>`;
 }
 function crmRefresh() {
   const st = allClientStats(), q = UI.crmQ.trim().toLowerCase(), qd = q.replace(/\D/g, '');
@@ -993,45 +1234,60 @@ function crmRefresh() {
 function clientModal(id) {
   const c = C(id); if (!c) return;
   const s = clientStats(id), fb = s.favBar && B(s.favBar);
-  const wa = 'https://wa.me/' + c.telefono.replace(/\D/g, '');
   const hist = [...s.hist].reverse();
   const avgGap = s.visitas > 1 ? Math.round((s.hist[s.hist.length - 1].ts - s.hist[0].ts) / DAY / (s.visitas - 1)) : null;
-  openModal(`<div class="m-h">${cav(c, 'lg')}<h2>${esc(c.nombre)}<small>Cliente de ${esc(S(c.sucursalId).nombre)} desde ${new Date(c.alta).toLocaleDateString('es-AR', {month: 'long', year: 'numeric'})}</small></h2>${segTag(s.seg)}<button class="btn btn-ghost" aria-label="Cerrar" onclick="closeModal()">${ic('x')}</button></div>
+  const cups = cuponesPara(c);
+  const prox = DB.turnos.filter(t => t.clienteId === id && t.ts >= Date.now() && ['pendiente', 'confirmado'].includes(t.estado)).sort((a, b) => a.ts - b.ts)[0];
+  openModal(`<div class="m-h">${cav(c, 'lg')}<h2>${esc(c.nombre)}<small>Cliente de ${esc(S(c.sucursalId).nombre)} desde ${new Date(c.alta).toLocaleDateString('es-AR', {month: 'long', year: 'numeric'})} · llegó por ${esc(c.origen || 'Mostrador')}</small></h2>${segTag(s.seg)}<button class="btn btn-ghost" aria-label="Cerrar" onclick="closeModal()">${ic('x')}</button></div>
   <div class="m-b">
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">
-      <a class="btn btn-line btn-sm" href="${wa}" target="_blank" rel="noopener">${ic('chat', 15)} WhatsApp</a>
+      <a class="btn btn-wa btn-sm" href="${waLink(c.telefono, `Hola ${first(c.nombre)}! Te escribimos de Bacano Barber Shop.`)}" target="_blank" rel="noopener">${ic('chat', 15)} WhatsApp</a>
       <a class="btn btn-line btn-sm" href="tel:${c.telefono.replace(/[^\d+]/g, '')}">${ic('phone', 15)} ${esc(c.telefono)}</a>
-      <span class="btn btn-ghost btn-sm" style="cursor:default">${esc(c.email)}</span></div>
+      ${c.email ? `<span class="btn btn-ghost btn-sm" style="cursor:default">${esc(c.email)}</span>` : ''}
+      <span class="tag ${c.consent ? 't-ok' : 't-mute'}" style="align-self:center">${c.consent ? 'Acepta novedades por WhatsApp' : 'Sin permiso para promociones'}</span></div>
+    ${prox ? `<div class="banner" style="margin-bottom:16px">${ic('cal', 18)}<span>Próximo turno: <b>${esc(fLong(prox.ts))} a las ${hm(minOf(prox.ts))}</b> con ${esc(B(prox.barberoId)?.nombre)} en ${esc(S(prox.sucursalId).nombre)}.</span></div>` : ''}
     <div class="mini"><div><small>Visitas</small><b>${s.visitas}</b></div><div><small>Total gastado</small><b>${kmoney(s.total)}</b></div><div><small>Ticket promedio</small><b>${money(s.visitas ? s.total / s.visitas : 0)}</b></div><div><small>Vuelve cada</small><b>${avgGap ? avgGap + ' días' : '—'}</b></div></div>
     <div class="grid g-2" style="margin-bottom:16px">
-      <div class="deal-box" style="margin:0;display:block"><small class="muted">Corte preferido</small><div style="font-weight:800;font-size:15px">${s.favSvc ? esc(V(s.favSvc).nombre) : '—'}</div><small class="muted">Barbero de confianza</small><div style="font-weight:800;font-size:15px">${fb ? esc(fb.nombre) + ' · ' + esc(S(fb.sucursalId).nombre) : '—'}</div></div>
-      <div class="deal-box" style="margin:0;display:block"><small class="muted">Notas</small><div style="font-size:14px">${c.notas ? esc(c.notas) : '<span class="muted">Sin notas. Usá “Editar” para agregar preferencias.</span>'}</div><small class="muted">Última visita</small><div style="font-weight:800;font-size:15px">${s.ultima ? fDT(s.ultima) + ' (' + ago(s.ultima) + ')' : '—'}</div></div>
+      <div>${stampCard(c)}
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+          <a class="btn btn-line btn-sm" href="${waLink(c.telefono, `Hola ${first(c.nombre)}! Esta es tu tarjeta del ${DB.club.nombre}: ${cardURL(c.id)} Llevás ${c.sellos || 0} de ${DB.club.meta} sellos.`)}" target="_blank" rel="noopener">${ic('chat', 15)} Enviarle su tarjeta</a>
+          ${cups.length ? cups.map(k => `<span class="tag t-vip">${ic('tag', 12)} ${esc(k.code)} −${k.pct}%</span>`).join('') : ''}</div></div>
+      <div class="deal-box" style="margin:0;display:block"><small class="muted">Corte preferido</small><div style="font-weight:800;font-size:15px">${s.favSvc ? esc(V(s.favSvc).nombre) : '—'}</div>
+        <small class="muted">Barbero de confianza</small><div style="font-weight:800;font-size:15px">${fb ? esc(fb.nombre) + ' · ' + esc(S(fb.sucursalId).nombre) : '—'}</div>
+        <small class="muted">Cumpleaños</small><div style="font-weight:800;font-size:15px">${c.cumple ? fCumple(c.cumple) : '—'}</div>
+        <small class="muted">Notas</small><div style="font-size:14px">${c.notas ? esc(c.notas) : '<span class="muted">Sin notas.</span>'}</div></div>
     </div>
     <h3 style="margin:0 0 8px;font-size:15px">Historial de visitas</h3>
     ${hist.length ? `<div class="tw" style="max-height:300px;overflow:auto"><table><thead><tr><th>Fecha</th><th>Servicio</th><th>Barbero</th><th>Sucursal</th><th class="num">Monto</th></tr></thead><tbody>
-    ${hist.map(x => `<tr><td style="white-space:nowrap">${fDT(x.ts)}</td><td>${esc(V(x.servicioId).nombre)}</td><td style="white-space:nowrap">${esc(B(x.barberoId)?.nombre)}</td><td>${esc(S(x.sucursalId).nombre.replace('Bacano ', ''))}</td><td class="num">${money(x.precio)}</td></tr>`).join('')}</tbody></table></div>` : '<div class="empty">Todavía no tiene visitas registradas.</div>'}
+    ${hist.map(x => `<tr><td style="white-space:nowrap">${fDT(x.ts)}</td><td>${esc(V(x.servicioId).nombre)}${x.descuento ? `<div class="split">${x.canje ? 'Premio del club' : 'Cupón ' + esc(x.cupon)}</div>` : ''}</td><td style="white-space:nowrap">${esc(B(x.barberoId)?.nombre)}</td><td>${esc(S(x.sucursalId).nombre.replace('Bacano ', ''))}</td><td class="num">${money(x.precio)}</td></tr>`).join('')}</tbody></table></div>` : '<div class="empty">Todavía no tiene visitas registradas.</div>'}
   </div>
-  <div class="m-f"><button class="btn btn-line" onclick="clientForm('${c.id}')">${ic('edit', 15)} Editar</button><button class="btn btn-red" onclick="closeModal();startPosWith('${c.id}')">${ic('pos', 16)} Registrar servicio</button></div>`, true);
+  <div class="m-f"><button class="btn btn-line" onclick="clientForm('${c.id}')">${ic('edit', 15)} Editar</button><button class="btn btn-line" onclick="closeModal();bookStart({panel:true,origen:'Mostrador',clienteId:'${c.id}',sucursalId:'${c.sucursalId}'})">${ic('cal', 15)} Darle un turno</button><button class="btn btn-red" onclick="closeModal();startPosWith('${c.id}')">${ic('pos', 16)} Cobrar ahora</button></div>`, true);
 }
 function startPosWith(id) { const c = C(id); resetPos(UI.branch !== 'all' ? UI.branch : c.sucursalId); go('pos'); posClient(id); }
 function clientForm(id, fromPos = false, preset = '') {
-  const c = id ? C(id) : {nombre: preset && !/\d/.test(preset) ? preset.replace(/\b\w/g, m => m.toUpperCase()) : '', telefono: preset && /\d/.test(preset) ? preset : '+54 9 387 ', email: '', sucursalId: fromPos ? POS.sucursalId : (UI.branch !== 'all' ? UI.branch : 'centro'), notas: ''};
+  const c = id ? C(id) : {nombre: preset && !/\d/.test(preset) ? preset.replace(/(^|\s)\S/g, m => m.toUpperCase()) : '', telefono: preset && /\d/.test(preset) ? preset : '+54 9 387 ', email: '', sucursalId: fromPos ? POS.sucursalId : (UI.branch !== 'all' ? UI.branch : 'centro'), notas: '', cumple: '', consent: true};
   openModal(`<div class="m-h"><h2>${id ? 'Editar cliente' : 'Nuevo cliente'}</h2><button class="btn btn-ghost" aria-label="Cerrar" onclick="closeModal()">${ic('x')}</button></div>
   <form class="m-b" id="cf" onsubmit="event.preventDefault();saveClient('${id || ''}',${fromPos})">
     <div class="field"><label class="fl" for="f-n">Nombre y apellido</label><input class="input" id="f-n" required value="${esc(c.nombre)}"></div>
     <div class="row2"><div class="field"><label class="fl" for="f-t">Teléfono (WhatsApp)</label><input class="input" id="f-t" required value="${esc(c.telefono)}"></div>
     <div class="field"><label class="fl" for="f-e">Email</label><input class="input" id="f-e" type="email" value="${esc(c.email)}"></div></div>
-    <div class="field"><label class="fl" for="f-s">Sucursal habitual</label><select class="select" id="f-s">${DB.sucursales.map(s => `<option value="${s.id}" ${s.id === c.sucursalId ? 'selected' : ''}>${esc(s.nombre)}</option>`).join('')}</select></div>
-    <div class="field" style="margin:0"><label class="fl" for="f-o">Notas y preferencias</label><textarea class="input" id="f-o" rows="3" placeholder="Ej: degradé bajo, barba marcada">${esc(c.notas)}</textarea></div>
+    <div class="row2"><div class="field"><label class="fl" for="f-s">Sucursal habitual</label><select class="select" id="f-s">${DB.sucursales.map(s => `<option value="${s.id}" ${s.id === c.sucursalId ? 'selected' : ''}>${esc(s.nombre)}</option>`).join('')}</select></div>
+    <div class="field"><label class="fl" for="f-b">Cumpleaños (día/mes)</label><input class="input" id="f-b" placeholder="Ej: 14/03" value="${c.cumple ? c.cumple.split('-').reverse().join('/') : ''}"></div></div>
+    <div class="field"><label class="fl" for="f-o">Notas y preferencias</label><textarea class="input" id="f-o" rows="2" placeholder="Ej: degradé bajo, barba marcada">${esc(c.notas)}</textarea></div>
+    <label class="check"><input type="checkbox" id="f-c" ${c.consent ? 'checked' : ''}><span>Acepta recibir recordatorios, novedades y cupones por WhatsApp.</span></label>
   </form>
   <div class="m-f"><button class="btn btn-ghost" onclick="closeModal()">Cancelar</button><button class="btn btn-main" onclick="$('#cf').requestSubmit()">${id ? 'Guardar cambios' : 'Crear cliente'}</button></div>`);
   setTimeout(() => $('#f-n')?.focus(), 50);
 }
+function parseCumple(v) { const m = String(v || '').match(/^\s*(\d{1,2})\s*[\/\-.]\s*(\d{1,2})/); if (!m) return ''; const d = +m[1], mo = +m[2]; if (d < 1 || d > 31 || mo < 1 || mo > 12) return ''; return String(mo).padStart(2, '0') + '-' + String(d).padStart(2, '0'); }
 function saveClient(id, fromPos) {
-  const d = {nombre: $('#f-n').value.trim(), telefono: $('#f-t').value.trim(), email: $('#f-e').value.trim().toLowerCase(), sucursalId: $('#f-s').value, notas: $('#f-o').value.trim()};
-  if (!d.nombre || d.telefono.replace(/\D/g, '').length < 6) { toast('Completá nombre y un teléfono válido'); return; }
+  const d = {nombre: $('#f-n').value.trim(), telefono: $('#f-t').value.trim(), email: $('#f-e').value.trim().toLowerCase(), sucursalId: $('#f-s').value, notas: $('#f-o').value.trim(), cumple: parseCumple($('#f-b').value), consent: $('#f-c').checked};
+  const nd = normPhone(d.telefono);
+  if (!d.nombre || !nd) { toast('Completá el nombre y un WhatsApp válido (área + número)'); return; }
+  d.telefono = fmtPhone(nd);
+  const dup = clientByPhone(nd); if (dup && dup.id !== id) { toast(`Ese WhatsApp ya es de ${dup.nombre}`); return; }
   let c;
-  if (id) { c = C(id); Object.assign(c, d); } else { c = {id: uid('c'), ...d, alta: Date.now()}; DB.clientes.push(c); }
+  if (id) { c = C(id); Object.assign(c, d); } else { c = {id: uid('c'), ...d, alta: Date.now(), origen: 'Mostrador', sellos: 0, canjes: 0}; DB.clientes.push(c); }
   _cs = null; touch(); closeModal();
   toast(id ? 'Cliente actualizado' : `Cliente creado: ${c.nombre}`);
   if (fromPos) { POS.clienteId = c.id; render(); } else { render(); if (id) clientModal(id); }
@@ -1090,6 +1346,470 @@ function saveBarber(id) {
 }
 
 /* =====================================================================
+   6b. Utilidades de turnos, WhatsApp y club
+   ===================================================================== */
+const OPEN_M = 600, CLOSE_M = 1260, STEP_M = 30;
+const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+const hm = m => String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(Math.round(m % 60)).padStart(2, '0');
+const minOf = ts => Math.round((ts - sod(ts)) / 6e4);
+const capFirst = x => String(x).charAt(0).toUpperCase() + String(x).slice(1);
+const fLong = t => { const d = new Date(t); return DIAS[d.getDay()] + ' ' + d.getDate() + ' de ' + d.toLocaleDateString('es-AR', {month: 'long'}); };
+const first = n => String(n || '').split(' ')[0];
+const fCumple = mmdd => { const [m, d] = mmdd.split('-').map(Number); return d + ' de ' + new Date(2026, m - 1, 1).toLocaleDateString('es-AR', {month: 'long'}); };
+const turnoDur = ids => sum(ids, id => V(id)?.duracion || 30);
+const isBusy = t => !['cancelado', 'ausente'].includes(t.estado);
+const waLink = (tel, text) => 'https://wa.me/' + String(tel).replace(/\D/g, '') + (text ? '?text=' + encodeURIComponent(text) : '');
+function normPhone(v) {
+  let d = String(v || '').replace(/\D/g, '');
+  if (d.startsWith('549')) d = d.slice(3); else if (d.startsWith('54')) d = d.slice(2);
+  if (d.startsWith('0')) d = d.slice(1);
+  if (d.length === 12 && d.slice(3, 5) === '15') d = d.slice(0, 3) + d.slice(5);
+  return d.length === 10 ? d : null;
+}
+const fmtPhone = d => `+54 9 ${d.slice(0, 3)} ${d.slice(3, 6)}-${d.slice(6)}`;
+const clientByPhone = d => DB.clientes.find(c => normPhone(c.telefono) === d);
+const baseURL = () => location.href.split('#')[0];
+const pubURL = () => baseURL() + '#reservar';
+const cardURL = id => baseURL() + '#tarjeta=' + id;
+const mapsURL = s => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.direccion + ', Argentina');
+
+function freeSlots(bid, day, dur, ignoreId, allowPast) {
+  if (new Date(day).getDay() === 0) return [];
+  const busy = DB.turnos.filter(t => t.barberoId === bid && t.id !== ignoreId && isBusy(t) && sod(t.ts) === day).map(t => [minOf(t.ts), minOf(t.ts) + t.dur]);
+  const nowM = !allowPast && sod(Date.now()) === day ? minOf(Date.now()) + 15 : -1;
+  const out = [];
+  for (let m = OPEN_M; m + dur <= CLOSE_M; m += STEP_M) { if (m < nowM) continue; if (busy.some(([a, b]) => m < b && m + dur > a)) continue; out.push(m); }
+  return out;
+}
+function freeSlotsSuc(sid, day, dur) {
+  const map = new Map();
+  barbF(sid).forEach(b => freeSlots(b.id, day, dur).forEach(m => { if (!map.has(m)) map.set(m, []); map.get(m).push(b.id); }));
+  return [...map.entries()].sort((a, b) => a[0] - b[0]).map(([m, ids]) => ({m, ids}));
+}
+function seedTurnos(R) {
+  const today = sod(Date.now()), nowT = Date.now();
+  const origins = [['Web', 4], ['WhatsApp', 3], ['Mostrador', 1.5], ['Instagram', 1]];
+  const wp = a => { let t = 0; for (const x of a) t += x[1]; let r = R() * t; for (const x of a) { r -= x[1]; if (r <= 0) return x[0]; } return a[0][0]; };
+  for (let d = 0; d <= 7; d++) {
+    const day = today + d * DAY; if (new Date(day).getDay() === 0) continue;
+    for (const b of DB.barberos) {
+      const target = Math.round((d === 0 ? 9 : Math.max(2, 9.5 - d * 1.1)) * b.skill * (0.75 + R() * .45));
+      const pool = DB.clientes.filter(c => c.sucursalId === b.sucursalId);
+      for (let k = 0; k < target; k++) {
+        const cli = R() < .9 ? pool[Math.floor(R() * pool.length)] : DB.clientes[Math.floor(R() * DB.clientes.length)];
+        const sv = [cli.servicioPref]; if (R() < .12 && cli.servicioPref !== 's4') sv.push('s4');
+        const dur = turnoDur(sv), slots = freeSlots(b.id, day, dur, null, true);
+        if (!slots.length) break;
+        const ts = day + slots[Math.floor(R() * slots.length)] * 6e4;
+        const estado = ts < nowT ? (R() < .9 ? 'atendido' : 'ausente') : (R() < (d <= 1 ? .72 : .45) ? 'confirmado' : 'pendiente');
+        DB.turnos.push({id: 'tu' + DB.turnos.length, sucursalId: b.sucursalId, barberoId: b.id, clienteId: cli.id, servicios: sv, ts, dur, estado, origen: wp(origins), nota: '', creado: Math.min(ts, nowT) - Math.floor(1 + R() * 5) * DAY});
+      }
+    }
+  }
+}
+
+/* Club: tarjeta de sellos */
+function stampDots(c) {
+  const g = DB.club.meta, n = Math.min(c.sellos || 0, g);
+  return `<div class="dots" aria-label="${n} de ${g} sellos">${Array.from({length: g}, (_, i) => `<i class="${i < n ? 'on' : ''}"></i>`).join('')}</div>`;
+}
+function stampCard(c, sample) {
+  const g = DB.club.meta, n = Math.min(c ? c.sellos || 0 : 6, g), cols = g <= 6 ? 3 : g <= 10 ? 5 : 6;
+  let cells = '';
+  for (let i = 0; i < g; i++) { const on = i < n, prize = i === g - 1;
+    cells += `<span class="st ${on ? 'on' : ''} ${prize && !on ? 'prize' : ''}">${on ? ic('pos', 18) : prize ? ic('gift', 18) : i + 1}</span>`; }
+  const msg = n >= g ? `¡Premio listo! Canjealo en tu próxima visita: ${esc(DB.club.premio)}.` : `Te ${g - n === 1 ? 'falta 1 sello' : `faltan ${g - n} sellos`} para: ${esc(DB.club.premio)}.`;
+  return `<div class="stamp" style="--cols:${cols}"><div class="stamp-h"><img src="${LOGO}" alt=""><div style="flex:1;min-width:0"><b>${esc(DB.club.nombre)}</b><small>${sample ? 'Así se ve tu tarjeta' : esc(c.nombre)}</small></div><span class="cnt">${n}/${g}</span></div>
+    <div class="stamp-g">${cells}</div><div class="stamp-f">${msg}</div></div>`;
+}
+function cuponesPara(c) {
+  const st = clientStats(c.id), out = [], ok = code => cuponValido(code);
+  if (st.visitas <= 1 && ok('BACANO10')) out.push(ok('BACANO10'));
+  if (st.seg === 'Inactivo' && ok('VUELVE15')) out.push(ok('VUELVE15'));
+  if (c.cumple && +c.cumple.slice(0, 2) === new Date().getMonth() + 1 && ok('CUMPLE20')) out.push(ok('CUMPLE20'));
+  return out;
+}
+
+/* =====================================================================
+   6c. Agenda de turnos
+   ===================================================================== */
+const ESTADOS = {pendiente: ['A confirmar', 't-warn'], confirmado: ['Confirmado', 't-ok'], atendido: ['Atendido', 't-mute'], ausente: ['No vino', 't-com'], cancelado: ['Cancelado', 't-mute']};
+const estTag = e => `<span class="tag ${ESTADOS[e][1]}">${ESTADOS[e][0]}</span>`;
+const oriTag = o => `<span class="tag t-mute">${o === 'Web' ? ic('globe', 12) + ' ' : o === 'WhatsApp' ? ic('chat', 12) + ' ' : ''}${esc(o)}</span>`;
+function vAgenda() {
+  const t0 = sod(Date.now());
+  if (UI.agDay == null || UI.agDay < t0) UI.agDay = t0;
+  const days = Array.from({length: 10}, (_, i) => t0 + i * DAY);
+  const dayT = DB.turnos.filter(t => sod(t.ts) === UI.agDay && inBranch(t));
+  const act = dayT.filter(isBusy), pend = dayT.filter(t => t.estado === 'pendiente').length;
+  const web = dayT.filter(t => t.origen === 'Web').length;
+  const capMin = barbF().length * (CLOSE_M - OPEN_M), occ = capMin ? sum(act, t => t.dur) / capMin * 100 : 0;
+  const closed = new Date(UI.agDay).getDay() === 0;
+  return `
+  <div class="daystrip">${days.map(d => { const n = DB.turnos.filter(t => sod(t.ts) === d && inBranch(t) && isBusy(t)).length, dd = new Date(d), sun = dd.getDay() === 0;
+    return `<button class="dday ${UI.agDay === d ? 'on' : ''}" onclick="UI.agDay=${d};render()"><small>${d === t0 ? 'Hoy' : DIAS[dd.getDay()].slice(0, 3)}</small><b>${dd.getDate()}</b><small>${sun ? 'Cerrado' : n + ' turnos'}</small></button>`; }).join('')}</div>
+  <div class="grid g-kpi mt" style="grid-template-columns:repeat(4,1fr)">
+    ${kpi('Turnos del día', act.length, esc(capFirst(fLong(UI.agDay))), true)}
+    ${kpi('A confirmar', pend, pend ? 'Confirmalos por WhatsApp' : 'Todo confirmado')}
+    ${kpi('Reservados online', web, 'Desde la página pública')}
+    ${kpi('Ocupación', pct(occ), 'De las sillas en horario')}
+  </div>
+  <div class="toolbar mt" style="justify-content:space-between"><p class="muted" style="margin:0;font-size:13px">Tocá un turno para confirmarlo, cobrarlo o marcar que no vino.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-line" onclick="location.hash='reservar'">${ic('globe', 16)} Ver página de reservas</button><button class="btn btn-main" onclick="bookStart({panel:true,origen:'Mostrador',day:UI.agDay,sucursalId:UI.branch!=='all'?UI.branch:null})">${ic('plus', 16)} Nuevo turno</button></div></div>
+  ${closed ? '<div class="card empty">Los domingos Bacano está cerrado.</div>' : branchesF().map(s => `
+    <section class="card mt ag-branch"><div class="card-h"><div><h3><i class="sdot" style="background:${s.color};margin-right:8px"></i>${esc(s.nombre)}</h3><p class="sub">${esc(s.horario)}</p></div></div>
+    <div class="agenda">${barbF(s.id).map(b => { const bt = dayT.filter(t => t.barberoId === b.id).sort((a, c) => a.ts - c.ts);
+      return `<div class="ag-col"><div class="ag-h">${av(b)}<div style="min-width:0"><b>${esc(b.nombre)}</b><small>${bt.filter(isBusy).length} turnos · ${modelTag(b)}</small></div></div>
+      ${bt.length ? bt.map(t => { const c = C(t.clienteId);
+        return `<button class="tu tu-${t.estado}" onclick="turnoModal('${t.id}')"><span class="tu-t">${hm(minOf(t.ts))} – ${hm(minOf(t.ts) + t.dur)}</span><b>${esc(c?.nombre)}</b><small>${t.servicios.map(id => V(id).nombre).join(' + ')}</small><span class="tu-tags">${estTag(t.estado)}${oriTag(t.origen)}</span></button>`; }).join('') : '<div class="empty" style="padding:16px 6px">Agenda libre</div>'}
+      </div>`; }).join('')}</div></section>`).join('')}`;
+}
+function turnoModal(id) {
+  const t = DB.turnos.find(x => x.id === id); if (!t) return;
+  const c = C(t.clienteId), b = B(t.barberoId), s = S(t.sucursalId), st = clientStats(c.id);
+  const svc = t.servicios.map(i => V(i).nombre).join(' + '), total = sum(t.servicios, i => V(i).precio);
+  const conf = `Hola ${first(c.nombre)}! Te confirmamos tu turno en ${s.nombre} (${s.direccion}) el ${fLong(t.ts)} a las ${hm(minOf(t.ts))} con ${first(b.nombre)}: ${svc}. ¡Te esperamos!`;
+  const abierto = ['pendiente', 'confirmado'].includes(t.estado);
+  openModal(`<div class="m-h">${cav(c, 'lg')}<h2>${esc(c.nombre)}<small>${esc(c.telefono)} · ${st.visitas} visitas · ${c.sellos || 0}/${DB.club.meta} sellos</small></h2>${estTag(t.estado)}<button class="btn btn-ghost" aria-label="Cerrar" onclick="closeModal()">${ic('x')}</button></div>
+  <div class="m-b">
+    <div class="deal-box" style="display:block"><div style="font-family:var(--display);font-size:30px;line-height:1.1">${hm(minOf(t.ts))} – ${hm(minOf(t.ts) + t.dur)} h</div>
+      <div style="font-weight:700">${esc(capFirst(fLong(t.ts)))}</div>
+      <div class="muted" style="font-size:13.5px;margin-top:4px">${esc(svc)} · ${money(total)}<br>Con ${esc(b.nombre)} en ${esc(s.nombre)} · Reservado por ${esc(t.origen)} ${ago(t.creado)}</div>
+      ${t.nota ? `<div style="margin-top:8px;font-size:13.5px">Nota del cliente: ${esc(t.nota)}</div>` : ''}</div>
+    ${t.estado === 'atendido' && t.ticket ? `<p class="muted" style="margin:0">Cobrado en el ticket #${t.ticket}.</p>` : ''}
+  </div>
+  <div class="m-f">
+    ${t.estado === 'pendiente' ? `<a class="btn btn-wa" href="${waLink(c.telefono, conf)}" target="_blank" rel="noopener" onclick="turnoSet('${t.id}','confirmado')">${ic('chat', 16)} Confirmar por WhatsApp</a>` : ''}
+    ${t.estado === 'confirmado' ? `<a class="btn btn-line" href="${waLink(c.telefono, campText('manana', c, t))}" target="_blank" rel="noopener" onclick="logEnvio('manana','${c.id}')">${ic('chat', 16)} Recordatorio</a>` : ''}
+    ${abierto ? `<button class="btn btn-ghost" onclick="turnoSet('${t.id}','ausente')">No vino</button><button class="btn btn-ghost" onclick="turnoSet('${t.id}','cancelado')">Cancelar turno</button><button class="btn btn-red" onclick="turnoLoad('${t.id}')">${ic('pos', 16)} Cobrar</button>` : ''}
+    ${['ausente', 'cancelado'].includes(t.estado) ? `<button class="btn btn-line" onclick="turnoSet('${t.id}','confirmado')">Reactivar turno</button>` : ''}
+    <button class="btn btn-ghost" onclick="closeModal();clientModal('${c.id}')">Ver ficha</button>
+  </div>`);
+}
+function turnoSet(id, estado) {
+  const t = DB.turnos.find(x => x.id === id); if (!t) return;
+  if (estado === 'confirmado' && !isBusy(t) && !freeSlots(t.barberoId, sod(t.ts), t.dur, t.id, true).includes(minOf(t.ts))) { toast('Ese horario ya lo ocupó otro turno'); return; }
+  t.estado = estado; touch(); closeModal(); render();
+  toast({confirmado: 'Turno confirmado', ausente: 'Marcado como ausente', cancelado: 'Turno cancelado'}[estado]);
+}
+
+/* =====================================================================
+   6d. Reserva de turno (pública y desde el panel)
+   ===================================================================== */
+let BK = null;
+const mh = (t, s) => `<div class="m-h"><h2>${t}${s ? `<small>${s}</small>` : ''}</h2><button class="btn btn-ghost" aria-label="Cerrar" onclick="closeModal()">${ic('x')}</button></div>`;
+const bkSteps = n => `<div class="bk-steps" aria-hidden="true">${[1, 2, 3, 4].map(i => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</div>`;
+function bookStart(o = {}) {
+  const c = o.clienteId ? C(o.clienteId) : null;
+  BK = {step: 1, sel: [...(o.sel || [])], sucursalId: o.sucursalId || null, barberoId: o.barberoId || 'any', day: o.day && new Date(o.day).getDay() !== 0 ? o.day : null, min: null, slotBar: null,
+    nombre: c ? c.nombre : '', wa: c ? c.telefono : '', nota: '', consent: !!c, promo: true, origen: o.origen || 'Web', panel: !!o.panel, done: null};
+  if (BK.barberoId !== 'any') BK.sucursalId = B(BK.barberoId).sucursalId;
+  if (BK.sel.length) BK.step = 2;
+  openModal('<div id="bkBody"></div>');
+  renderBook();
+}
+function bkSummary() {
+  const tot = sum(BK.sel, id => V(id).precio), dur = turnoDur(BK.sel), b = BK.slotBar ? B(BK.slotBar) : BK.barberoId !== 'any' ? B(BK.barberoId) : null;
+  return `<div class="bk-sum">${BK.sel.map(id => `<div class="tk-l"><span>${esc(V(id).nombre)}</span><span>${money(V(id).precio)}</span></div>`).join('')}
+    <div class="tk-l" style="border-top:1px solid var(--line);padding-top:8px;margin-top:4px"><span class="muted">${dur} min${BK.sucursalId ? ' · ' + esc(S(BK.sucursalId).nombre) : ''}${b ? ' · con ' + esc(first(b.nombre)) : ''}${BK.day && BK.min != null ? ' · ' + esc(fLong(BK.day)) + ' ' + hm(BK.min) + ' h' : ''}</span><span>${money(tot)}</span></div></div>`;
+}
+function renderBook() {
+  const box = $('#bkBody'); if (!box || !BK) return;
+  let h = '';
+  if (BK.step === 1) {
+    h = mh('¿Qué te querés hacer?', 'Paso 1 de 4 · Servicios') + `<div class="m-b">${bkSteps(1)}
+      <div class="opts o-svc">${DB.servicios.map(v => `<button class="opt ${BK.sel.includes(v.id) ? 'on' : ''}" onclick="bkSvc('${v.id}')"><b>${esc(v.nombre)}</b><span class="pr">${money(v.precio)}</span><small>${v.duracion} min</small></button>`).join('')}</div>
+      ${BK.sel.length ? `<div class="mt">${bkSummary()}</div>` : ''}</div>
+      <div class="m-f"><button class="btn btn-main" ${BK.sel.length ? '' : 'disabled'} onclick="bkGo(2)">Elegir sucursal y barbero</button></div>`;
+  } else if (BK.step === 2) {
+    h = mh('¿Dónde y con quién?', 'Paso 2 de 4 · Sucursal y barbero') + `<div class="m-b">${bkSteps(2)}
+      <label class="fl">Sucursal</label><div class="opts" style="grid-template-columns:1fr 1fr;margin-bottom:16px">${DB.sucursales.map(s => `<button class="opt ${BK.sucursalId === s.id ? 'on' : ''}" onclick="bkSuc('${s.id}')"><b><i class="sdot" style="background:${s.color};margin-right:6px"></i>${esc(s.nombre)}</b><small>${esc(s.direccion.replace(', Salta Capital', ''))}</small></button>`).join('')}</div>
+      ${BK.sucursalId ? `<label class="fl">Barbero</label><div class="opts o-bar"><button class="opt ${BK.barberoId === 'any' ? 'on' : ''}" onclick="bkBar('any')"><div class="opt-b"><span class="av" style="background:var(--ink)">${ic('star', 16)}</span><div class="who"><div><b>Sin preferencia</b><small>El primer horario libre</small></div></div></div></button>
+        ${barbF(BK.sucursalId).map(b => `<button class="opt ${BK.barberoId === b.id ? 'on' : ''}" onclick="bkBar('${b.id}')"><div class="opt-b">${av(b)}<div class="who"><div><b>${esc(b.nombre)}</b><small>${esc(b.especialidad)}</small></div></div></div></button>`).join('')}</div>` : ''}
+      <div class="mt">${bkSummary()}</div></div>
+      <div class="m-f"><button class="btn btn-ghost" onclick="bkGo(1)">Atrás</button><button class="btn btn-main" ${BK.sucursalId ? '' : 'disabled'} onclick="bkGo(3)">Elegir día y horario</button></div>`;
+  } else if (BK.step === 3) {
+    const t0 = sod(Date.now()), days = Array.from({length: 14}, (_, i) => t0 + i * DAY), dur = turnoDur(BK.sel);
+    const slotsOf = d => BK.barberoId === 'any' ? freeSlotsSuc(BK.sucursalId, d, dur) : freeSlots(BK.barberoId, d, dur).map(m => ({m, ids: [BK.barberoId]}));
+    if (BK.day == null || !slotsOf(BK.day).length) BK.day = days.find(d => slotsOf(d).length) || null;
+    const slots = BK.day ? slotsOf(BK.day) : [];
+    h = mh('¿Cuándo?', 'Paso 3 de 4 · Día y horario') + `<div class="m-b">${bkSteps(3)}
+      <div class="daystrip sm">${days.map(d => { const has = slotsOf(d).length, dd = new Date(d);
+        return `<button class="dday ${BK.day === d ? 'on' : ''}" ${has ? '' : 'disabled'} onclick="BK.day=${d};BK.min=null;BK.slotBar=null;renderBook()"><small>${d === t0 ? 'Hoy' : DIAS[dd.getDay()].slice(0, 3)}</small><b>${dd.getDate()}</b><small>${dd.toLocaleDateString('es-AR', {month: 'short'}).replace('.', '')}</small></button>`; }).join('')}</div>
+      <div class="fl" style="margin:14px 0 8px">${BK.day ? esc(capFirst(fLong(BK.day))) : ''}</div>
+      ${slots.length ? `<div class="slots">${slots.map(s => `<button class="slot ${BK.min === s.m ? 'on' : ''}" onclick="bkSlot(${s.m},'${s.ids[0]}')">${hm(s.m)}</button>`).join('')}</div>` : '<p class="muted">No quedan horarios. Probá otro día u otro barbero.</p>'}
+      <div class="mt">${bkSummary()}</div></div>
+      <div class="m-f"><button class="btn btn-ghost" onclick="bkGo(2)">Atrás</button><button class="btn btn-main" ${BK.min != null ? '' : 'disabled'} onclick="bkGo(4)">Completar mis datos</button></div>`;
+  } else if (BK.step === 4) {
+    h = mh(BK.panel ? 'Datos del cliente' : 'Tus datos', 'Paso 4 de 4 · Confirmación') + `<form class="m-b" onsubmit="event.preventDefault();bkConfirm()">${bkSteps(4)}
+      <div class="field"><label class="fl" for="bkN">Nombre y apellido</label><input class="input" id="bkN" autocomplete="name" maxlength="50" value="${esc(BK.nombre)}" oninput="BK.nombre=this.value"></div>
+      <div class="field"><label class="fl" for="bkW">WhatsApp (con código de área)</label><input class="input" id="bkW" inputmode="tel" autocomplete="tel" maxlength="24" placeholder="Ej: 387 4123456" value="${esc(BK.wa)}" oninput="BK.wa=this.value;bkHello()"></div>
+      <div id="bkHi"></div>
+      <div class="field"><label class="fl" for="bkO">Algo que debamos saber (opcional)</label><input class="input" id="bkO" maxlength="120" placeholder="Ej: vengo con mi hijo" value="${esc(BK.nota)}" oninput="BK.nota=this.value"></div>
+      <label class="check"><input type="checkbox" ${BK.consent ? 'checked' : ''} onchange="BK.consent=this.checked"><span>${BK.panel ? 'El cliente acepta' : 'Acepto'} que Bacano guarde ${BK.panel ? 'sus' : 'mis'} datos sólo para gestionar los turnos (Ley 25.326).</span></label>
+      <label class="check"><input type="checkbox" ${BK.promo ? 'checked' : ''} onchange="BK.promo=this.checked"><span>Quiero el recordatorio del turno, mi tarjeta del ${esc(DB.club.nombre)} y novedades por WhatsApp.</span></label>
+      ${bkSummary()}<div id="bkWarn"></div><button type="submit" style="display:none"></button></form>
+      <div class="m-f"><button class="btn btn-ghost" onclick="bkGo(3)">Atrás</button><button class="btn btn-red" onclick="bkConfirm()">${ic('check', 16)} Confirmar turno</button></div>`;
+  } else {
+    const t = DB.turnos.find(x => x.id === BK.done), c = C(t.clienteId), b = B(t.barberoId), s = S(t.sucursalId), svc = t.servicios.map(i => V(i).nombre).join(' + ');
+    const toLocal = `Hola Bacano! Soy ${c.nombre}. Reservé un turno por la web: ${svc}, el ${fLong(t.ts)} a las ${hm(minOf(t.ts))} con ${first(b.nombre)} en ${s.nombre}.${t.nota ? ' Nota: ' + t.nota : ''}`;
+    const toCli = `Hola ${first(c.nombre)}! Te confirmamos tu turno en ${s.nombre} (${s.direccion}) el ${fLong(t.ts)} a las ${hm(minOf(t.ts))} con ${first(b.nombre)}: ${svc}. Tu tarjeta del ${DB.club.nombre}: ${cardURL(c.id)}`;
+    const gcal = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(svc + ' · Bacano') + '&dates=' + gstamp(t.ts) + '/' + gstamp(t.ts + t.dur * 6e4) + '&location=' + encodeURIComponent(s.direccion) + '&details=' + encodeURIComponent('Turno con ' + b.nombre + '. Cambios por WhatsApp: ' + s.telefono);
+    h = `<div class="m-b"><div class="bk-ok"><span class="tick">${ic('check', 30)}</span><h2>${BK.panel ? 'Turno agendado' : '¡Turno reservado!'}</h2>
+      <p>${esc(capFirst(fLong(t.ts)))} a las <b>${hm(minOf(t.ts))} h</b> con ${esc(b.nombre)}<br>${esc(svc)} · ${esc(s.nombre)}</p></div>
+      ${BK.panel ? '' : `<p class="muted" style="text-align:center;margin:0 0 14px;font-size:13.5px">Te vamos a escribir por WhatsApp para confirmarlo. Cada visita suma un sello en tu tarjeta del ${esc(DB.club.nombre)}.</p>`}
+      <div class="bk-actions">
+        ${BK.panel ? `<a class="btn btn-wa btn-block" href="${waLink(c.telefono, toCli)}" target="_blank" rel="noopener">${ic('chat', 16)} Enviar confirmación al cliente</a>`
+          : `<a class="btn btn-wa btn-block" href="${waLink(s.telefono, toLocal)}" target="_blank" rel="noopener">${ic('chat', 16)} Avisar a Bacano por WhatsApp</a>
+             <a class="btn btn-line btn-block" href="${gcal}" target="_blank" rel="noopener">${ic('cal', 16)} Agregar a Google Calendar</a>
+             <a class="btn btn-line btn-block" href="${mapsURL(s)}" target="_blank" rel="noopener">${ic('pin', 16)} Cómo llegar</a>
+             <button class="btn btn-line btn-block" onclick="closeModal();cardModal('${c.id}')">${ic('gift', 16)} Ver mi tarjeta del club</button>`}
+        <button class="btn btn-main btn-block" onclick="closeModal()">Listo</button></div>
+      <p class="muted" style="font-size:12px;text-align:center;margin:14px 0 0">Demo: el turno queda guardado en este navegador y aparece en la agenda del panel. En el sistema final le llega al local al instante.</p></div>`;
+  }
+  box.innerHTML = h;
+  if (BK.step === 4) bkHello();
+}
+const gstamp = t => new Date(t).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+function bkGo(n) { BK.step = n; renderBook(); $('.ov')?.scrollTo(0, 0); }
+function bkSvc(id) { const i = BK.sel.indexOf(id); i >= 0 ? BK.sel.splice(i, 1) : BK.sel.push(id); BK.min = null; renderBook(); }
+function bkSuc(id) { if (BK.sucursalId !== id) { BK.sucursalId = id; BK.barberoId = 'any'; BK.min = null; BK.slotBar = null; } renderBook(); }
+function bkBar(id) { BK.barberoId = id; BK.min = null; BK.slotBar = null; renderBook(); }
+function bkSlot(m, bid) { BK.min = m; BK.slotBar = bid; renderBook(); }
+function bkHello() {
+  const box = $('#bkHi'); if (!box) return;
+  const nd = normPhone(BK.wa), c = nd && clientByPhone(nd);
+  box.innerHTML = c ? `<div class="banner" style="margin-bottom:14px">${ic('gift', 18)}<span>${BK.panel ? 'Cliente existente' : '¡Hola de nuevo'}, <b>${esc(first(c.nombre))}</b>${BK.panel ? '' : '!'} Lleva${BK.panel ? '' : 's'} ${c.sellos || 0} de ${DB.club.meta} sellos en el ${esc(DB.club.nombre)}.</span></div>` : '';
+  if (c && !BK.nombre.trim()) { BK.nombre = c.nombre; const n = $('#bkN'); if (n) n.value = c.nombre; }
+}
+function bkConfirm() {
+  const warn = m => { $('#bkWarn').innerHTML = `<div class="warn">${esc(m)}</div>`; };
+  const nombre = BK.nombre.trim().replace(/\s+/g, ' '), nd = normPhone(BK.wa);
+  if (nombre.length < 3) return warn('Escribí nombre y apellido.');
+  if (!nd) return warn('Revisá el WhatsApp: código de área y número, sin 0 ni 15. Ej: 387 4123456.');
+  if (!BK.consent) return warn('Necesitamos la autorización para guardar los datos del turno.');
+  const dur = turnoDur(BK.sel), bid = BK.slotBar;
+  if (!bid || !freeSlots(bid, BK.day, dur).includes(BK.min)) { BK.step = 3; BK.min = null; renderBook(); toast('Ese horario se acaba de ocupar. Elegí otro.'); return; }
+  let c = clientByPhone(nd);
+  if (!c) { c = {id: uid('c'), nombre, telefono: fmtPhone(nd), email: '', sucursalId: BK.sucursalId, notas: '', alta: Date.now(), cumple: '', consent: BK.promo, origen: BK.origen === 'Mostrador' ? 'Mostrador' : 'Web', sellos: 0, canjes: 0}; DB.clientes.push(c); }
+  else if (BK.promo) c.consent = true;
+  const t = {id: uid('tu'), sucursalId: BK.sucursalId, barberoId: bid, clienteId: c.id, servicios: [...BK.sel], ts: BK.day + BK.min * 6e4, dur, estado: BK.panel ? 'confirmado' : 'pendiente', origen: BK.origen, nota: BK.nota.trim().slice(0, 120), creado: Date.now()};
+  DB.turnos.push(t); _cs = null; touch();
+  BK.done = t.id; BK.step = 5; renderBook();
+  if (isPublic()) { PUB.sel = []; renderPub(); } else { UI.agDay = sod(t.ts); render(); }
+}
+
+/* =====================================================================
+   6e. Página pública (lo que ve el cliente)
+   ===================================================================== */
+const PUB = {sel: []};
+const isPublic = () => /^#(reservar|publica|tarjeta)/.test(location.hash);
+function renderPub() {
+  const total = sum(PUB.sel, id => V(id).precio), wa = S('centro').telefono;
+  const open = (() => { const d = new Date(), m = d.getHours() * 60 + d.getMinutes(); return d.getDay() !== 0 && m >= OPEN_M && m < CLOSE_M; })();
+  $('#pub').innerHTML = `
+  <header class="pub-top"><a href="#reservar" class="pub-brand" onclick="window.scrollTo({top:0,behavior:'smooth'});return false"><img src="${LOGO}" alt="Bacano"><span>Bacano</span></a>
+    <nav><a href="#" onclick="pubGo('p-serv');return false">Servicios</a><a href="#" onclick="pubGo('p-team');return false">Equipo</a><a href="#" onclick="pubGo('p-club');return false">Club</a><a href="#" onclick="pubGo('p-suc');return false">Sucursales</a></nav>
+    <button class="btn btn-red btn-sm" onclick="bookStart({sel:PUB.sel})">Reservar turno</button></header>
+  <section class="pub-hero">
+    <img class="pub-logo" src="${LOGO}" alt="Bacano Show Room · Barber Shop">
+    <div class="pub-hero-t">
+      <p class="pub-open"><i class="sdot" style="background:${open ? 'var(--ok)' : 'var(--ink-3)'}"></i>${open ? 'Abierto ahora · hasta las 21 h' : 'Cerrado ahora · abrimos de lunes a sábado a las 10 h'}</p>
+      <h1>Tu corte, a tu hora.</h1>
+      <p>Reservá en Bacano Centro o Bacano Norte en menos de un minuto. Elegís barbero, día y horario, y te confirmamos por WhatsApp.</p>
+      <div class="pub-cta"><button class="btn btn-red" onclick="bookStart({sel:PUB.sel})">${ic('cal', 18)} Reservar turno</button><a class="btn btn-line" href="${waLink(wa, 'Hola Bacano! Quiero hacer una consulta.')}" target="_blank" rel="noopener">${ic('chat', 18)} Escribinos</a></div>
+    </div>
+  </section>
+  <div class="pole-strip"></div>
+
+  <section class="pub-sec" id="p-serv"><h2>Servicios</h2><p class="pub-lead">Elegí uno o varios y reservá. Precios finales, en efectivo, transferencia, débito o Mercado Pago.</p>
+    <div class="pub-svc">${DB.servicios.map(v => { const on = PUB.sel.includes(v.id);
+      return `<div class="svc-row ${on ? 'on' : ''}"><div style="min-width:0"><b>${esc(v.nombre)}</b><small>${v.duracion} min</small></div><span class="svc-p">${money(v.precio)}</span><button class="btn btn-sm ${on ? 'btn-main' : 'btn-line'}" aria-pressed="${on}" onclick="pubSel('${v.id}')">${on ? ic('check', 14) + ' Elegido' : 'Elegir'}</button></div>`; }).join('')}</div></section>
+
+  <section class="pub-sec" id="p-team"><h2>El equipo</h2><p class="pub-lead">Ocho barberos en dos sucursales. Reservá con el tuyo o dejá que te toque el primero libre.</p>
+    <div class="pub-team">${DB.barberos.filter(b => b.activo !== false).map(b => `<div class="tm">${av(b, 'lg')}<div style="min-width:0"><b>${esc(b.nombre)}</b><small>“${esc(b.apodo)}” · ${esc(b.especialidad)}</small><small><i class="sdot" style="background:${S(b.sucursalId).color}"></i> ${esc(S(b.sucursalId).nombre)}</small></div><button class="btn btn-line btn-sm" onclick="bookStart({sel:PUB.sel,barberoId:'${b.id}'})">Reservar</button></div>`).join('')}</div></section>
+
+  <section class="pub-sec pub-club" id="p-club"><div class="club-copy"><h2>${esc(DB.club.nombre)}</h2>
+      <p class="pub-lead">Cada visita suma un sello. Con ${DB.club.meta} sellos, ${esc(DB.club.premio.toLowerCase())}. Además te llegan cupones por tu cumple y promos para socios.</p>
+      <div class="club-forms">
+        <form onsubmit="event.preventDefault();pubCheck()"><label class="fl" for="pcW">¿Ya sos socio? Consultá tu tarjeta</label><div style="display:flex;gap:8px"><input class="input" id="pcW" inputmode="tel" placeholder="Tu WhatsApp, ej: 387 4123456"><button class="btn btn-main">Ver</button></div><div id="pcMsg"></div></form>
+        <form onsubmit="event.preventDefault();pubJoin()"><label class="fl">¿Primera vez? Sumate gratis</label>
+          <div class="row2" style="gap:8px"><input class="input" id="pjN" placeholder="Nombre y apellido" autocomplete="name"><input class="input" id="pjW" inputmode="tel" placeholder="WhatsApp"></div>
+          <div style="display:flex;gap:8px;margin-top:8px"><input class="input" id="pjB" placeholder="Cumpleaños (día/mes)" style="flex:1"><button class="btn btn-red">Crear mi tarjeta</button></div>
+          <label class="check" style="margin-top:8px"><input type="checkbox" id="pjC"><span>Acepto que Bacano guarde mis datos para el club y me escriba por WhatsApp (Ley 25.326).</span></label><div id="pjMsg"></div></form>
+      </div></div>
+    <div class="club-card">${stampCard(null, true)}</div></section>
+
+  <section class="pub-sec" id="p-suc"><h2>Sucursales</h2><p class="pub-lead">Dos barberías en Salta Capital, mismo estilo y mismos precios.</p>
+    <div class="grid g-2">${DB.sucursales.map(s => `<div class="pub-branch"><span class="branch-flag" style="background:${s.color}"></span><div style="flex:1;min-width:0"><h3>${esc(s.nombre)}</h3><p>${esc(s.direccion)}</p><p>${esc(s.horario)}</p>
+      <div class="pub-cta" style="margin-top:12px"><button class="btn btn-main btn-sm" onclick="bookStart({sel:PUB.sel,sucursalId:'${s.id}'})">Reservar acá</button><a class="btn btn-line btn-sm" href="${mapsURL(s)}" target="_blank" rel="noopener">${ic('pin', 15)} Cómo llegar</a><a class="btn btn-wa btn-sm" href="${waLink(s.telefono, 'Hola ' + s.nombre + '! Quiero hacer una consulta.')}" target="_blank" rel="noopener">${ic('chat', 15)} WhatsApp</a></div></div></div>`).join('')}</div></section>
+
+  <footer class="pub-foot"><img src="${LOGO}" alt=""><p>Bacano Show Room · Barber Shop · Salta Capital<br><a href="https://instagram.com/" target="_blank" rel="noopener">${esc(DB.negocio.instagram)}</a> · <a href="${DB.negocio.resena}" target="_blank" rel="noopener">Dejanos tu reseña en Google</a></p>
+    <p class="muted" style="font-size:12px">Sistema RAVE · Desarrollado por Rave Holding · <a href="#" onclick="location.hash='';return false">Acceso del equipo</a></p></footer>
+
+  ${PUB.sel.length ? `<div class="pub-bar"><span><b>${PUB.sel.length} ${PUB.sel.length === 1 ? 'servicio' : 'servicios'}</b> · ${money(total)}</span><button class="btn btn-red" onclick="bookStart({sel:PUB.sel})">Reservar turno</button></div>`
+    : `<a class="pub-wa" href="${waLink(wa, 'Hola Bacano! Quiero reservar un turno.')}" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">${ic('chat', 26)}</a>`}`;
+}
+function pubGo(id) { document.getElementById(id)?.scrollIntoView({behavior: 'smooth', block: 'start'}); }
+function pubSel(id) { const i = PUB.sel.indexOf(id); i >= 0 ? PUB.sel.splice(i, 1) : PUB.sel.push(id); const y = scrollY; renderPub(); scrollTo(0, y); }
+function pubCheck() {
+  const nd = normPhone($('#pcW').value), c = nd && clientByPhone(nd);
+  if (!nd) { $('#pcMsg').innerHTML = '<div class="warn">Escribí el WhatsApp con código de área, sin 0 ni 15.</div>'; return; }
+  if (!c) { $('#pcMsg').innerHTML = '<div class="warn">No encontramos ese número. Sumate con el formulario de abajo, es gratis.</div>'; return; }
+  $('#pcMsg').innerHTML = ''; cardModal(c.id);
+}
+function pubJoin() {
+  const n = $('#pjN').value.trim().replace(/\s+/g, ' '), nd = normPhone($('#pjW').value), msg = m => $('#pjMsg').innerHTML = `<div class="warn">${esc(m)}</div>`;
+  if (n.length < 3) return msg('Escribí tu nombre y apellido.');
+  if (!nd) return msg('Revisá el WhatsApp: código de área y número, sin 0 ni 15.');
+  if (!$('#pjC').checked) return msg('Necesitamos tu autorización para crear la tarjeta.');
+  let c = clientByPhone(nd);
+  if (!c) { c = {id: uid('c'), nombre: n, telefono: fmtPhone(nd), email: '', sucursalId: 'centro', notas: '', alta: Date.now(), cumple: parseCumple($('#pjB').value), consent: true, origen: 'Web', sellos: 0, canjes: 0}; DB.clientes.push(c); _cs = null; touch(); }
+  cardModal(c.id, true);
+}
+function cardModal(id, nuevo) {
+  const c = C(id); if (!c) return;
+  const cups = cuponesPara(c), prox = DB.turnos.filter(t => t.clienteId === id && t.ts >= Date.now() && ['pendiente', 'confirmado'].includes(t.estado)).sort((a, b) => a.ts - b.ts)[0];
+  openModal(mh(nuevo ? `¡Bienvenido al club, ${esc(first(c.nombre))}!` : `Hola, ${esc(first(c.nombre))}`, esc(DB.club.nombre)) + `<div class="m-b">${stampCard(c)}
+    ${nuevo ? `<p class="muted" style="font-size:13.5px">Tu tarjeta ya está activa. El primer sello llega con tu próxima visita: decí tu nombre en el mostrador.</p>` : ''}
+    ${prox ? `<div class="banner mt">${ic('cal', 18)}<span>Tu próximo turno: <b>${esc(fLong(prox.ts))}</b> a las <b>${hm(minOf(prox.ts))} h</b> en ${esc(S(prox.sucursalId).nombre)}.</span></div>` : ''}
+    ${cups.length ? `<h3 style="font-size:15px;margin:16px 0 8px">Tus cupones</h3>${cups.map(k => `<div class="coupon"><div><b>${esc(k.code)}</b><small>${esc(k.desc)}</small></div><span>−${k.pct}%</span></div>`).join('')}<p class="muted" style="font-size:12.5px;margin:6px 0 0">Mostrá el código al pagar.</p>` : ''}
+    <div class="bk-actions mt"><button class="btn btn-red btn-block" onclick="closeModal();bookStart({sel:PUB.sel,sucursalId:'${c.sucursalId}'})">${ic('cal', 16)} Reservar turno</button>
+      <a class="btn btn-wa btn-block" href="${waLink(S(c.sucursalId).telefono, `Hola Bacano! Soy ${c.nombre}, ${nuevo ? 'me acabo de sumar al club' : 'quiero consultar por mi tarjeta del club'}.`)}" target="_blank" rel="noopener">${ic('chat', 16)} Escribir a Bacano</a>
+      <button class="btn btn-line btn-block" onclick="copyText('${cardURL(c.id)}','Enlace de tu tarjeta copiado')">Guardar el enlace de mi tarjeta</button></div></div>`);
+}
+function copyText(t, ok) { (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast(ok || 'Copiado')).catch(() => { prompt('Copiá este enlace:', t); }); }
+
+/* =====================================================================
+   6f. Club y marketing
+   ===================================================================== */
+const CAMPS = [
+  {id: 'manana', nombre: 'Recordatorio de turnos', desc: 'Clientes con turno mañana', icon: 'cal',
+    tpl: 'Hola {nombre}! Te recordamos tu turno mañana a las {hora} en {sucursal} con {barbero}. Si no podés venir, avisanos por acá así liberamos el lugar. ¡Te esperamos!'},
+  {id: 'recuperar', nombre: 'Recuperar clientes', desc: 'No vienen hace más de 40 días', icon: 'refresh', cupon: 'VUELVE15',
+    tpl: 'Hola {nombre}! Te extrañamos en Bacano. Hace {dias} días que no pasás. Esta semana tenés 15% off con el código {cupon}. Reservá en un minuto: {link}'},
+  {id: 'cumple', nombre: 'Cumpleaños del mes', desc: 'Socios que cumplen años este mes', icon: 'gift', cupon: 'CUMPLE20',
+    tpl: '¡Feliz cumple, {nombre}! De regalo tenés 20% off en tu próximo corte con el código {cupon}, válido todo el mes. Reservá acá: {link}'},
+  {id: 'sello', nombre: 'A un paso del premio', desc: 'Les falta un sello o ya lo tienen', icon: 'star',
+    tpl: 'Hola {nombre}! Tenés {sellos} de {meta} sellos en el Club Bacano. {premio} Reservá tu turno: {link}'},
+  {id: 'nuevos', nombre: 'Segunda visita', desc: 'Vinieron una sola vez en el último mes', icon: 'tag', cupon: 'BACANO10',
+    tpl: 'Hola {nombre}! Gracias por elegir Bacano. Para tu próxima visita tenés 10% off con el código {cupon}. Reservá: {link}'},
+  {id: 'resena', nombre: 'Pedir reseña en Google', desc: 'Atendidos hoy', icon: 'star',
+    tpl: 'Gracias por venir hoy a Bacano, {nombre}! ¿Nos dejás tu opinión en Google? Nos ayuda muchísimo: {resena}'}
+];
+function campList(id) {
+  const st = allClientStats(), t0 = sod(Date.now()), meta = DB.club.meta, cs = DB.clientes.filter(c => c.consent && inBranch(c));
+  if (id === 'manana') return DB.turnos.filter(t => sod(t.ts) === t0 + DAY && isBusy(t) && t.estado !== 'atendido' && inBranch(t)).sort((a, b) => a.ts - b.ts).map(t => ({c: C(t.clienteId), t})).filter(x => x.c);
+  if (id === 'recuperar') return cs.filter(c => st[c.id].seg === 'Inactivo').map(c => ({c}));
+  if (id === 'cumple') return cs.filter(c => c.cumple && +c.cumple.slice(0, 2) === new Date().getMonth() + 1).sort((a, b) => a.cumple.localeCompare(b.cumple)).map(c => ({c}));
+  if (id === 'sello') return cs.filter(c => (c.sellos || 0) >= meta - 1).map(c => ({c}));
+  if (id === 'nuevos') return cs.filter(c => st[c.id].visitas === 1 && st[c.id].ultima >= Date.now() - 30 * DAY).map(c => ({c}));
+  if (id === 'resena') { const ids = [...new Set(DB.tx.filter(x => x.ts >= t0 && inBranch(x)).map(x => x.clienteId))]; return ids.map(C).filter(c => c && c.consent).map(c => ({c})); }
+  return [];
+}
+function campText(id, c, t) {
+  const camp = CAMPS.find(x => x.id === id), st = clientStats(c.id), meta = DB.club.meta;
+  if (!t && id === 'manana') t = DB.turnos.filter(x => x.clienteId === c.id && x.ts >= Date.now() && isBusy(x)).sort((a, b) => a.ts - b.ts)[0];
+  const vars = {nombre: first(c.nombre), cupon: camp.cupon || '', link: pubURL(), resena: DB.negocio.resena, meta,
+    dias: st.ultima ? Math.round((Date.now() - st.ultima) / DAY) : '', sellos: Math.min(c.sellos || 0, meta),
+    premio: (c.sellos || 0) >= meta ? `¡Ya tenés tu premio: ${DB.club.premio}!` : `Te falta 1 sello para: ${DB.club.premio}.`,
+    hora: t ? hm(minOf(t.ts)) : '', sucursal: t ? S(t.sucursalId).nombre : '', barbero: t ? first(B(t.barberoId)?.nombre) : ''};
+  return (DB.campTpl[id] || camp.tpl).replace(/\{(\w+)\}/g, (m, k) => vars[k] ?? m);
+}
+function logEnvio(camp, clienteId) { DB.envios.push({camp, clienteId, ts: Date.now()}); touch(); }
+function vMarketing() {
+  const all = DB.clientes.filter(c => inBranch(c)), meta = DB.club.meta, m30 = Date.now() - 30 * DAY;
+  const listos = all.filter(c => (c.sellos || 0) >= meta).length;
+  const cupTx = DB.tx.filter(x => x.cupon && x.ts >= m30 && inBranch(x));
+  const online = DB.turnos.filter(t => t.origen === 'Web' && t.creado >= m30 && inBranch(t)).length;
+  const envios30 = DB.envios.filter(e => e.ts >= m30).length;
+  const usos = code => DB.tx.filter(x => x.cupon === code && inBranch(x));
+  return `
+  <div class="grid g-kpi" style="grid-template-columns:repeat(5,1fr)">
+    ${kpi('Socios del club', all.length, `${all.filter(c => c.consent).length} aceptan WhatsApp`, true)}
+    ${kpi('Premios listos', listos, `${all.filter(c => (c.sellos || 0) === meta - 1).length} a un sello`)}
+    ${kpi('Cupones usados', cupTx.length, kmoney(sum(cupTx, x => x.precio)) + ' facturados, 30 días')}
+    ${kpi('Turnos online', online, 'Reservados en la web, 30 días')}
+    ${kpi('Mensajes enviados', envios30, 'Campañas de los últimos 30 días')}
+  </div>
+
+  <div class="card mt"><div class="card-h"><div><h3>Campañas por WhatsApp</h3><p class="sub">Listas que se arman solas con los datos del sistema. Sólo incluyen clientes que aceptaron recibir mensajes.</p></div></div>
+    <div class="camps">${CAMPS.map(k => { const n = campList(k.id).length, last = DB.envios.filter(e => e.camp === k.id).sort((a, b) => b.ts - a.ts)[0];
+      return `<button class="camp" onclick="campModal('${k.id}')"><span class="camp-i">${ic(k.icon, 20)}</span><div style="flex:1;min-width:0"><b>${k.nombre}</b><small>${k.desc}</small><small>${last ? 'Último envío ' + ago(last.ts) : 'Sin envíos todavía'}${k.cupon ? ' · cupón ' + k.cupon : ''}</small></div><span class="camp-n">${n}</span></button>`; }).join('')}</div></div>
+
+  <div class="grid g-2 mt">
+    <div class="card"><div class="card-h"><div><h3>Cupones</h3><p class="sub">Se aplican en el mostrador escribiendo el código</p></div><button class="btn btn-main btn-sm" onclick="cuponForm()">${ic('plus', 15)} Crear cupón</button></div>
+      <div class="tw"><table><thead><tr><th>Código</th><th>Descuento</th><th>Vigencia</th><th class="num">Usos</th><th class="num">Facturó</th><th></th></tr></thead><tbody>
+      ${DB.cupones.map(k => { const u = usos(k.code), vig = cuponValido(k.code);
+        return `<tr><td><b>${esc(k.code)}</b><div class="split" style="white-space:normal">${esc(k.desc)}</div></td><td>${k.pct}%</td><td style="white-space:nowrap">${vig ? 'Hasta ' + fDate(k.hasta) : `<span class="tag t-mute">${k.activo ? 'Vencido' : 'Pausado'}</span>`}</td><td class="num">${u.length}</td><td class="num">${kmoney(sum(u, x => x.precio))}</td>
+        <td class="num"><button class="btn btn-ghost btn-sm" onclick="cuponToggle('${k.code}')">${k.activo ? 'Pausar' : 'Activar'}</button></td></tr>`; }).join('')}</tbody></table></div></div>
+
+    <div class="card"><div class="card-h"><div><h3>${esc(DB.club.nombre)}</h3><p class="sub">Tarjeta de sellos: cada visita cobrada suma uno</p></div><button class="btn btn-line btn-sm" onclick="clubForm()">${ic('edit', 15)} Configurar</button></div>
+      ${stampCard(null, true)}
+      <div class="mini" style="grid-template-columns:repeat(3,1fr);margin:14px 0 0"><div><small>Sellos para el premio</small><b>${meta}</b></div><div><small>Premios canjeados</small><b>${sum(all, c => c.canjes || 0)}</b></div><div><small>Socios nuevos, 30 días</small><b>${all.filter(c => c.alta >= m30).length}</b></div></div></div>
+  </div>
+
+  <div class="card mt"><div class="card-h"><div><h3>Tu página pública</h3><p class="sub">Para la bio de Instagram, el perfil de Google y los estados de WhatsApp</p></div><button class="btn btn-red btn-sm" onclick="location.hash='reservar'">${ic('globe', 15)} Abrir página</button></div>
+    <div class="grid g-2">
+      <div><label class="fl">Enlace para reservar turno</label><div style="display:flex;gap:8px"><input class="input" readonly value="${esc(pubURL())}"><button class="btn btn-line" onclick="copyText(pubURL(),'Enlace copiado')">Copiar</button></div>
+        <label class="fl" style="margin-top:14px">Texto para la bio de Instagram</label><div style="display:flex;gap:8px"><input class="input" readonly id="bioTxt" value="Barbería en Salta · Centro y Norte · Reservá tu turno acá"><button class="btn btn-line" onclick="copyText($('#bioTxt').value,'Texto copiado')">Copiar</button></div></div>
+      <div><label class="fl">Reseñas en Google</label><div style="display:flex;gap:8px"><input class="input" readonly value="${esc(DB.negocio.resena)}"><a class="btn btn-line" href="${DB.negocio.resena}" target="_blank" rel="noopener">Abrir</a></div>
+        <p class="muted" style="font-size:12.5px;margin:10px 0 0">Después de cada cobro aparece el botón “Pedir reseña” para mandarlo por WhatsApp a los clientes que aceptaron mensajes.</p></div>
+    </div></div>`;
+}
+function campModal(id) {
+  const k = CAMPS.find(x => x.id === id), list = campList(id), t0 = sod(Date.now());
+  const sent = cid => DB.envios.some(e => e.camp === id && e.clienteId === cid && e.ts >= t0);
+  openModal(mh(k.nombre, `${list.length} destinatarios · ${k.desc}`) + `<div class="m-b">
+    <label class="fl" for="tplT">Mensaje</label><textarea class="input" id="tplT" rows="3" oninput="DB.campTpl['${id}']=this.value;touch();campPreview('${id}')">${esc(DB.campTpl[id] || k.tpl)}</textarea>
+    <p class="muted" style="font-size:12px;margin:6px 0 14px">Se reemplaza solo: {nombre}${k.cupon ? ', {cupon}' : ''}, {link}${id === 'manana' ? ', {hora}, {sucursal}, {barbero}' : ''}${id === 'sello' ? ', {sellos}, {meta}, {premio}' : ''}${id === 'recuperar' ? ', {dias}' : ''}${id === 'resena' ? ', {resena}' : ''}.</p>
+    <div class="preview" id="tplP"></div>
+    ${list.length ? `<div class="rcpt">${list.map(({c, t}) => `<div class="q-item" id="r-${c.id}"><div class="who">${cav(c)}<div style="min-width:0"><b>${esc(c.nombre)}</b><small>${esc(c.telefono)}${t ? ' · ' + hm(minOf(t.ts)) + ' en ' + esc(S(t.sucursalId).nombre.replace('Bacano ', '')) : ''}${id === 'sello' ? ' · ' + (c.sellos || 0) + '/' + DB.club.meta : ''}${id === 'cumple' ? ' · ' + fCumple(c.cumple) : ''}</small></div></div>
+      ${sent(c.id) ? '<span class="tag t-ok">Enviado</span>' : `<a class="btn btn-wa btn-sm" href="#" onclick="return campSend(this,'${id}','${c.id}')">${ic('chat', 14)} Enviar</a>`}</div>`).join('')}</div>`
+      : '<div class="empty">No hay destinatarios para esta campaña ahora.</div>'}
+    <p class="muted" style="font-size:12px;margin:14px 0 0">En la demo cada envío abre WhatsApp con el mensaje listo. Con WhatsApp Business API los envíos salen automáticos.</p></div>`, true);
+  campPreview(id);
+}
+function campPreview(id) { const l = campList(id)[0], el = $('#tplP'); if (!el) return; el.innerHTML = l ? `<small>Vista previa para ${esc(first(l.c.nombre))}</small>${esc(campText(id, l.c, l.t))}` : ''; }
+function campSend(a, id, cid) {
+  const c = C(cid), t = id === 'manana' ? DB.turnos.find(x => x.clienteId === cid && sod(x.ts) === sod(Date.now()) + DAY && isBusy(x)) : null;
+  window.open(waLink(c.telefono, campText(id, c, t)), '_blank', 'noopener');
+  logEnvio(id, cid); a.outerHTML = '<span class="tag t-ok">Enviado</span>';
+  return false;
+}
+function cuponForm() {
+  openModal(mh('Crear cupón', 'Se usa escribiendo el código en el mostrador') + `<form class="m-b" id="kf" onsubmit="event.preventDefault();saveCupon()">
+    <div class="row2"><div class="field"><label class="fl" for="k-c">Código</label><input class="input" id="k-c" maxlength="14" placeholder="Ej: NOVIEMBRE10" style="text-transform:uppercase" required></div>
+    <div class="field"><label class="fl" for="k-p">Descuento (%)</label><input class="input" id="k-p" type="number" min="1" max="100" value="10" required></div></div>
+    <div class="row2"><div class="field"><label class="fl" for="k-d">Para qué es</label><input class="input" id="k-d" placeholder="Ej: Promo de noviembre"></div>
+    <div class="field"><label class="fl" for="k-v">Vigencia (días)</label><input class="input" id="k-v" type="number" min="1" value="30"></div></div></form>
+    <div class="m-f"><button class="btn btn-ghost" onclick="closeModal()">Cancelar</button><button class="btn btn-main" onclick="$('#kf').requestSubmit()">Crear cupón</button></div>`);
+  setTimeout(() => $('#k-c')?.focus(), 50);
+}
+function saveCupon() {
+  const code = $('#k-c').value.trim().toUpperCase().replace(/[^A-Z0-9]/g, ''), pctv = Math.min(100, Math.max(1, +$('#k-p').value || 0));
+  if (code.length < 3) { toast('El código necesita al menos 3 letras o números'); return; }
+  if (DB.cupones.some(k => k.code === code)) { toast(`Ya existe el cupón ${code}`); return; }
+  const t = sod(Date.now());
+  DB.cupones.unshift({code, pct: pctv, desc: $('#k-d').value.trim() || `${pctv}% de descuento`, desde: t, hasta: t + (+$('#k-v').value || 30) * DAY, activo: true});
+  touch(); closeModal(); render(); toast(`Cupón ${code} creado`);
+}
+function cuponToggle(code) { const k = DB.cupones.find(x => x.code === code); k.activo = !k.activo; if (k.activo && k.hasta < Date.now()) k.hasta = sod(Date.now()) + 30 * DAY; touch(); render(); toast(k.activo ? `Cupón ${code} activo` : `Cupón ${code} pausado`); }
+function clubForm() {
+  const k = DB.club;
+  openModal(mh('Configurar el club', 'Los cambios aplican a las próximas visitas') + `<form class="m-b" id="clf" onsubmit="event.preventDefault();saveClub()">
+    <div class="row2"><div class="field"><label class="fl" for="cl-n">Nombre del club</label><input class="input" id="cl-n" value="${esc(k.nombre)}"></div>
+    <div class="field"><label class="fl" for="cl-m">Sellos para el premio</label><select class="select" id="cl-m">${[5, 6, 8, 10, 12].map(n => `<option ${n === k.meta ? 'selected' : ''}>${n}</option>`).join('')}</select></div></div>
+    <div class="row2"><div class="field"><label class="fl" for="cl-s">Servicio de regalo</label><select class="select" id="cl-s">${DB.servicios.map(v => `<option value="${v.id}" ${v.id === k.premioSvc ? 'selected' : ''}>${esc(v.nombre)} (${money(v.precio)})</option>`).join('')}</select></div>
+    <div class="field"><label class="fl" for="cl-p">Cómo se anuncia el premio</label><input class="input" id="cl-p" value="${esc(k.premio)}"></div></div></form>
+    <div class="m-f"><button class="btn btn-ghost" onclick="closeModal()">Cancelar</button><button class="btn btn-main" onclick="$('#clf').requestSubmit()">Guardar</button></div>`);
+}
+function saveClub() {
+  Object.assign(DB.club, {nombre: $('#cl-n').value.trim() || 'Club Bacano', meta: +$('#cl-m').value, premioSvc: $('#cl-s').value, premio: $('#cl-p').value.trim() || V($('#cl-s').value).nombre + ' gratis'});
+  touch(); closeModal(); render(); toast('Club actualizado');
+}
+
+/* =====================================================================
    7. Modal, toast, tooltip
    ===================================================================== */
 function openModal(html, wide = false) {
@@ -1119,26 +1839,33 @@ document.addEventListener('click', e => { if (!e.target.closest('.cli-box')) { c
 /* =====================================================================
    8. Navegación y render
    ===================================================================== */
-function go(v) { UI.view = v; closeModal(); render(); window.scrollTo({top: 0}); }
+function go(v) { if (isPublic()) { location.hash = ''; } UI.view = v; closeModal(); render(); window.scrollTo({top: 0}); }
+function route() {
+  const pub = isPublic();
+  $('.app').style.display = pub ? 'none' : ''; $('#pub').style.display = pub ? '' : 'none';
+  if (pub) { closeModal(); renderPub(); window.scrollTo({top: 0}); const m = location.hash.match(/^#tarjeta=([\w-]+)/); if (m && C(m[1])) cardModal(m[1]); }
+  else render();
+}
+window.addEventListener('hashchange', route);
 function setBranch(b) { UI.branch = b; if (b !== 'all') posBranch.call(null, b); render(); }
 function setPeriod(p) { UI.period = p; render(); }
 function render() {
   const v = VIEWS.find(x => x.id === UI.view);
   $('#nav').innerHTML = VIEWS.map(x => `<button class="${x.id === UI.view ? 'on' : ''}" onclick="go('${x.id}')">${ic(x.icon, 19)}${x.label}</button>`).join('');
-  $('#mtabs').innerHTML = VIEWS.map(x => `<button class="${x.id === UI.view ? 'on' : ''}" onclick="go('${x.id}')">${x.label}</button>`).join('');
-  const sub = UI.view === 'pos' ? 'Registrá servicios y cobrá en el momento' : UI.view === 'crm' ? 'Historial, preferencias y contacto' : `${branchLabel()}, ${periodLabel()}`;
+  $('#mtabs').innerHTML = VIEWS.map(x => `<button class="${x.id === UI.view ? 'on' : ''}" onclick="go('${x.id}')">${x.label}</button>`).join('') + `<button onclick="location.hash='reservar'">Página pública</button>`;
+  const sub = {pos: 'Registrá servicios y cobrá en el momento', crm: 'Historial, preferencias, club y contacto', agenda: `${branchLabel()} · reservas online, WhatsApp y mostrador`, marketing: `${branchLabel()} · campañas, cupones y tarjeta de sellos`}[UI.view] || `${branchLabel()}, ${periodLabel()}`;
   $('#title').innerHTML = `${v.title}<span>${esc(sub)}</span>`;
   const showFilters = UI.view !== 'pos';
   $('#branchSeg').style.display = showFilters ? '' : 'none';
-  $('#periodSeg').style.display = showFilters && UI.view !== 'crm' ? '' : 'none';
+  $('#periodSeg').style.display = showFilters && !['crm', 'agenda', 'marketing'].includes(UI.view) ? '' : 'none';
   $('#branchSeg').innerHTML = [['all', 'Todas', '#f5f3ef'], ...DB.sucursales.map(s => [s.id, s.nombre.replace('Bacano ', ''), s.color])].map(([id, l, c]) => `<button class="${UI.branch === id ? 'on' : ''}" onclick="setBranch('${id}')"><i class="dot" style="background:${c}"></i>${l}</button>`).join('');
   $('#periodSeg').innerHTML = PERIODS.map(([id, l]) => `<button class="${UI.period === id ? 'on' : ''}" onclick="setPeriod('${id}')">${l}</button>`).join('');
-  $('#view').innerHTML = {dashboard: vDashboard, pos: vPos, ranking: vRanking, crm: vCrm, sucursales: vSucursales}[UI.view]();
+  $('#view').innerHTML = {dashboard: vDashboard, agenda: vAgenda, pos: vPos, ranking: vRanking, crm: vCrm, marketing: vMarketing, sucursales: vSucursales}[UI.view]();
 }
 function tick() { const d = new Date(); const s = d.toLocaleDateString('es-AR', {weekday: 'short', day: 'numeric', month: 'short'}) + ' · ' + fTime(d); document.querySelectorAll('.clk').forEach(e => e.textContent = s); }
 
 /* Arranque */
-load(); resetPos(); render(); tick(); setInterval(tick, 15000);
+load(); resetPos(); route(); tick(); setInterval(tick, 15000);
 </script>
 </body>
 </html>
