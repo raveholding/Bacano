@@ -4,9 +4,19 @@ Demo funcional del sistema de gestión para **Bacano Show Room · Barber Shop** 
 Es un único archivo `index.html`: se abre en cualquier navegador, sin servidor ni instalación.
 
 ## Cómo probarla
-- **Panel del negocio**: abrí `index.html`.
-- **Página pública para clientes** (reservas, club, WhatsApp): `index.html#reservar`. También se abre con el botón “Ver página pública” del panel.
-- **Tarjeta personal del club**: `index.html#tarjeta=<id-del-cliente>` (se envía por WhatsApp desde la ficha del cliente).
+Igual que las demás demos del Sistema RAVE: **adelante la página pública, detrás el panel del equipo**.
+
+- **Página pública** (al abrir el link): servicios, turnero online, Club Bacano y WhatsApp.
+- **Acceso del equipo**: botón al pie de la página pública (o `#acceso`). Se elige el usuario y se ingresa con PIN:
+
+| Usuario | Rol | PIN | Qué ve |
+|---|---|---|---|
+| Administrador | Dueño | 1111 | Todo, las dos sucursales |
+| Julián Ferreyra | Encargado · Centro | 2222 | Su sucursal: dashboard, agenda, mostrador, ranking, clientes y marketing |
+| Lucas Medina | Encargado · Norte | 3333 | Ídem, sucursal Norte |
+| Tomás Gutiérrez | Barbero · Centro | 4444 | Agenda, mostrador, clientes y sus números |
+
+- **Tarjeta personal del club**: `#tarjeta=<id-del-cliente>` (se envía por WhatsApp desde la ficha del cliente).
 
 ## Qué incluye
 - **Página pública**: servicios con precios, equipo, sucursales con “Cómo llegar”, botón de WhatsApp y reserva de turno en 4 pasos (servicios, sucursal y barbero, día y horario, datos). Confirmación por WhatsApp y Google Calendar.
@@ -22,4 +32,4 @@ Es un único archivo `index.html`: se abre en cualquier navegador, sin servidor 
 ## Datos de demo
 Al abrir se generan ~60 días de movimientos relativos a la fecha actual. Lo que se cargue durante la presentación queda guardado en el navegador; el botón **Restablecer datos de demo** vuelve al estado inicial.
 
-Desarrollado por Rave Holding.
+Sistema RAVE · Desarrollado por **VINCULAR BUSINESS** · Único celular (387) 4484132 · vincularbusiness@gmail.com · *“Tu idea, en buenas manos.”*
